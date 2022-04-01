@@ -1,0 +1,59 @@
+header {
+    background-color: #001524;
+}
+
+body {
+    background-color: #e7ecef;
+}
+
+.fotoUsuario {
+    font-size: 20px;
+    color: #e7ecef;
+}
+
+.carrito {
+    position: absolute;
+    top: 3vw;
+    right: 15vw;
+    font-size: 25px;
+    color: #e7ecef;
+}
+
+.bars {
+    position: absolute;
+    top: 3vw;
+    right: 5vw;
+    font-size: 25px;
+    color: #e7ecef;
+}
+
+.descripcion {}
+
+.conteinerGeneral{
+    display: flex;
+    margin: 1rem;
+    background-color: #d0d2d3;
+    border-radius: 6px;
+}
+
+
+.foto{
+    width: 30%;
+    box-sizing: border-box;
+}
+.imagen{
+    width: 90%;
+    margin: 6px;
+    border-radius: 6px;
+}
+
+.info{
+    font-size: 0.75rem;
+    width: 70%;
+    box-sizing: border-box;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+.precio{
+    font-weight: bold;
+}
