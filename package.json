@@ -1,0 +1,24 @@
+{
+  "name": "niamazon",
+  "version": "1.0.0",
+  "description": "Grupo 9 ñamazon\r Entre todos los integrantes decidimos hacer una ecommerce de venta de series y peliculas\r similar a \"Amazon Prime\".",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrunoBuresta/Grupo-9-niamazon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrunoBuresta/Grupo-9-niamazon/issues"
+  },
+  "homepage": "https://github.com/BrunoBuresta/Grupo-9-niamazon#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15"
+  }
+}
