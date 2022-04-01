@@ -1,5 +1,10 @@
+
+html{
+    font-family: 'Roboto';
+}
 header {
     background-color: #001524;
+    width: 100%;
 }
 
 body {
@@ -26,9 +31,6 @@ body {
     font-size: 25px;
     color: #e7ecef;
 }
-
-.descripcion {}
-
 .conteinerGeneral{
     display: flex;
     margin: 1rem;
@@ -56,4 +58,21 @@ body {
 }
 .precio{
     font-weight: bold;
+}
+footer{
+    background-color: #001524;
+    margin: 1rem;
+    padding: 1rem;
+}
+.eslogan{
+    font-size: 1rem;
+    color: #e7ecef;
+    margin: 6px;
+    text-align: center;
+}
+.copyright{
+    font-size: 0.75rem;
+    color: #e7ecef;
+    margin-bottom: 1rem;
+    text-align: center;
 }
