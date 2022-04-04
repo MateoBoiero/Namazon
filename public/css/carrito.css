@@ -3,6 +3,26 @@ html{
     font-family: 'Roboto';
 }
 
+header{
+    background-color: #001524;
+    width: 100%;
+}
+
+.carrito{
+    font-size: 25px;
+    color:#e7ecef;
+    position:absolute;
+    top: 3vw;
+    right: 15vw;
+}
+
+.bars{
+    font-size: 25px;
+    color:#e7ecef;
+    position:absolute;
+    top: 3vw;
+    right: 5vw;
+}
 .caja1{
     display: flex;
     flex-wrap: wrap;
@@ -33,7 +53,7 @@ html{
 }
 
 body {
-    background-color: #e7ecef;
+    background-color: #001524;
 }
 
 .descripcion{
@@ -46,3 +66,22 @@ body {
 .mas{
     margin: 6px;
 }
+
+footer{
+    background-color: #001524;
+    margin: 1rem;
+    padding: 1rem;
+}
+.eslogan{
+    font-size: 1rem;
+    color: #e7ecef;
+    margin: 6px;
+    text-align: center;
+}
+.copyright{
+    font-size: 0.75rem;
+    color: #e7ecef;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
