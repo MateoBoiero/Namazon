@@ -1,0 +1,47 @@
+
+html{
+    font-family: 'Roboto';
+}
+
+.caja1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #d0d2d3;
+    border-radius: 6px;
+}
+
+.caja2{
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.foto{
+    width: 90%;
+    border-radius: 6px;
+}
+
+.caja3{
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.opciones{
+    width: 100%;
+    margin: 1rem;
+}
+
+body {
+    background-color: #e7ecef;
+}
+
+.descripcion{
+    background-color: #d0d2d3;
+    padding: 1rem;
+    border-radius: 6px;
+    
+}
+
+.mas{
+    margin: 6px;
+}
