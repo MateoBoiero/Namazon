@@ -29,6 +29,7 @@ header{
     justify-content: space-around;
     background-color: #d0d2d3;
     border-radius: 6px;
+    margin-bottom: 10px;
 }
 
 .caja2{
@@ -56,15 +57,47 @@ body {
     background-color: #001524;
 }
 
-.descripcion{
+.caja4{
+    display: flex;
+    
+    justify-content: space-around;
     background-color: #d0d2d3;
-    padding: 1rem;
     border-radius: 6px;
+    
     
 }
 
-.mas{
+.añadir{
     margin: 6px;
+}
+
+.compartir{
+    margin: 6px;
+}
+
+.duracion{
+    margin-bottom: 0;
+    
+}
+
+.descripcion{
+    height: 50%;
+    width:50%;
+    margin: 10px;
+    border-radius: 6px;
+
+}
+
+.especificaciones{
+    position: absolute;
+    margin: 10px;
+}
+
+.star{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    
 }
 
 footer{
