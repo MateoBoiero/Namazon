@@ -97,13 +97,19 @@ body {
     margin: 10px;
 }
 
+
+.calificacion{
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 0px;
+}
+
 .star{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
     justify-content: flex-start;
-    align-content: flex-start;
-    
+    display:flex;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 0px;
 }
 
 footer{
