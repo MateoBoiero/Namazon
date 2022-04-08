@@ -1,0 +1,28 @@
+body{
+    margin: 1em 3em;
+}
+img{
+    display: block;
+    width: 18em;
+    height: 5em;
+    margin: 1em auto;
+    padding: 1em;
+    border-radius:0 30px
+}
+h1{
+    font-size: 20px
+}
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #e7ecef;
+    width: 70vw;
+    height: 25em;
+    border-radius: 1em;
+    margin: 2em auto;
+    padding: 1em 5em;
+}
+input{
+    width: 18em;
+}

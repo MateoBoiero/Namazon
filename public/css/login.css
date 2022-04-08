@@ -1,0 +1,78 @@
+body{
+    background: linear-gradient(to bottom,#001524 , #002a47);
+    margin: 0;
+    border: red solid 1px;
+}
+
+img{
+    display: block;
+    width: 18em;
+    height: 5em;
+    margin: 1em auto;
+    padding: 1em;
+    background-color: #e7ecef;
+    border-radius:0 30px
+}
+h1{
+    font-size: 2em;
+    text-align: center;
+    color: #001524;
+    margin-top: 0;
+}
+label{
+    font-size: 1.3em;
+    color: #001524;
+    margin: 1em 0;
+}
+.contenedor{
+    background-color: #e7ecef;
+    width: 21em;
+    height: 20em;
+    border-radius: 1em;
+    margin: 2em auto;
+    padding: 2em 5em;
+}
+.buscador{
+    background: transparent;
+    border: none;
+    height: 2em;
+    width: 100%;
+    margin-bottom: 1em;
+    border-bottom: 1px solid #001524;
+}
+.remember{
+    display: flex;
+    margin-top: 10px;
+}
+.remember label{
+    margin: 0px;
+    color: #001524;
+    font-size: 1em;
+}
+
+.enviar{
+    color: #e7ecef;
+    display:block;
+    border: none;
+    border-radius: 5px;
+    background-color: #001524;
+    width: 7.5em;
+    margin: 1.5em auto 0;
+    font-size: 1.5em;
+}
+a{
+    display:block;
+    color: #e7ecef;
+    border: none;
+    border-radius: 5px;
+    background-color: #001524;
+    width: 10em;
+    margin: 1em auto;
+    padding: 8px;
+    font-size: 1em;
+    text-decoration: none;
+}
+a:hover{
+    background-color:#e7ecef;
+    color:#001524 ;
+}
