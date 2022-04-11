@@ -8,11 +8,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/register.css">
 
-    <title>Registro</title>
+    <title>Recuperar Contraseña</title>
 </head>
 <body>
     <form class="formulario" action="/views/login.html" method="post">
-        <h1>Registrate</h1>
+        <h1>Recuperar Contraseña</h1>
         <div class="contenedor">
             <div class="input-contenedor">
                 <i class="fa-solid fa-user"></i>
@@ -23,13 +23,13 @@
                 <input type="email" name="email" id="email" placeholder="Email">
                 <br>
 
-                <i class="fa-solid fa-key"></i>
-                <input type="password" name="password" id="password" placeholder="Contraseña">
+                <i class="far fa-envelope"></i>
+                <input type="email" name="email" id="email" placeholder="Confirmar Email">
                 <br>
             </div>
-            <button type="submit">Registrate</button>
-            <p>Al registrarte, aceptas nustras Condiciones de uso y Politica de Privacidad</p>
-            <p>¿Ya tienes Cuenta? <a href="/views/login.html">Iniciar Sesion</a></p>
+            <button class="confirmacion" type="submit">Enviar Confirmacion</button>
+            <p>Si sus datos son Validos, se le enviara un codigo de confirmacion a su email</p>
+            <p>Volver al Inicio<a href="/views/login.html">Iniciar Sesion</a></p>
         </div>
     </form>
 

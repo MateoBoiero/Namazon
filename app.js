@@ -16,6 +16,15 @@ app.get("/detalleDeProducto", (req, res)=>{
     res.sendFile(path.resolve(__dirname, "./views/detalleDeProducto.html"))
 });
 
+//Mateo
 app.get ("/login", (req,res)=>{
     res.sendFile(path.resolve(__dirname, "./views/login.html"))
+});
+
+app.get ("/register", (req,res)=>{
+    res.sendFile(path.resolve(__dirname, "./views/register.html"))
+});
+
+app.get ("/forgot", (req,res)=>{
+    res.sendFile(path.resolve(__dirname, "./views/forgot.html"))
 });

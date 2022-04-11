@@ -1,13 +1,14 @@
 body{
+    font-family: 'Roboto';
     background: linear-gradient(to bottom,#001524 , #002a47);
-    margin: 0;
-    border: red solid 1px;
+    background-size:cover;
+    background-attachment: fixed;
 }
 
 img{
     display: block;
-    width: 18em;
-    height: 5em;
+    width: 17em;
+    height: 4em;
     margin: 1em auto;
     padding: 1em;
     background-color: #e7ecef;
@@ -27,7 +28,7 @@ label{
 .contenedor{
     background-color: #e7ecef;
     width: 21em;
-    height: 20em;
+    height: 22em;
     border-radius: 1em;
     margin: 2em auto;
     padding: 2em 5em;
@@ -57,22 +58,23 @@ label{
     border-radius: 5px;
     background-color: #001524;
     width: 7.5em;
-    margin: 1.5em auto 0;
+    margin: 1em auto 1em;
     font-size: 1.5em;
+    cursor: pointer;
+}
+p{ color: #001524;
+    text-align: center;
+    margin: 10px;
+
 }
 a{
-    display:block;
-    color: #e7ecef;
-    border: none;
-    border-radius: 5px;
-    background-color: #001524;
-    width: 10em;
-    margin: 1em auto;
-    padding: 8px;
-    font-size: 1em;
     text-decoration: none;
+    color: #001524;
+
 }
 a:hover{
-    background-color:#e7ecef;
-    color:#001524 ;
+    color:#e7ecef;
+    background-color: #001524;
+    padding: 5px;
+    border-radius: 5px;
 }
