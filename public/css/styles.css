@@ -32,7 +32,7 @@ body {
     color: #e7ecef;
 }
 .conteinerGeneral{
-    display: flex;
+    
     flex-wrap: wrap;
     margin: 1rem;
     background-color: #d0d2d3;
