@@ -10,7 +10,7 @@ body{
 }
 .formulario{
     background-color:#e7ecef;
-    width: 70%;
+    width: 60vw;
     margin: 4em auto;
     padding: 3px;
     border-radius: 1em;
@@ -49,20 +49,20 @@ input{
     color:#999
 }
 button{
-    display: block;
-    margin: 1em auto;
-    border: none;
-    width: 25%;
-    text-align: center;
     color: #e7ecef;
-    font-size: 20px;
-    background-color: #001524;
-    padding: 15px 20px;
+    display:block;
+    border: none;
     border-radius: 5px;
+    background-color: #001524;
+    width: 5.5em;
+    height: 1.5em;
+    margin: 1em auto 1em;
+    font-size: 1.5em;
     cursor: pointer;
 }
 .confirmacion{
-   width: 31%;
+   width: 20vw;
+   font-size: 1.2em;
 }
 p{
     text-align: center;
@@ -76,4 +76,81 @@ a{
 }
 a:hover{
     color: #999;
+}
+/*Media*/
+@media (max-width: 700px) {
+    h1 {
+        margin: 0.4em;
+      font-size: 2em
+    }
+    input{
+        margin-bottom: 0.5em;
+        font-size: 1.1em;
+    }
+    button{
+        margin: 0px auto 5px;
+        font-size: 1.2em;
+    }
+    .confirmacion{
+        margin: 0px auto 5px;
+        font-size: 1.2em;
+    }
+    p{
+        font-size: 0.7em;
+    }
+}
+
+@media (max-width: 500px) {
+    .formulario{
+        width: 80vw;
+    }
+    h1{
+        font-size: 1.5em;
+    }
+    input{
+        font-size: 0.8em;
+    }
+    .fa-solid{
+        font-size: 0.8em;
+    }
+    .fa-envelope{
+        font-size: 0.8em;
+    }
+    button{
+        font-size: 1em;
+    }
+    .confirmacion{
+        font-size: 1em;
+    }
+    p{
+        font-size: 0.6em;
+    }
+}
+@media (max-width: 358px){
+    .formulario{
+        width: 76vw;
+    }
+    .contenedor{
+        padding: 0;
+    }
+    input{
+        padding: 5px;
+    }
+    .fa-solid{
+        display: none;
+    }
+    .fa-envelope{
+        display: none;
+    }
+    button{
+        margin-top: 1px;
+    }
+    .confirmacion{
+        margin-top: 1px;
+        font-size: 0.8em;
+        width: 20vw;
+    }
+    .input-contenedor{
+        margin-bottom: 5px;
+    }
 }
