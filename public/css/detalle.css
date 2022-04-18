@@ -128,7 +128,8 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     background-color: #d0d2d3;
-    margin: 6px;
+    margin: auto;
+    margin-top: 6px;
     border-radius: 6px;
     width: 90%;
     
@@ -141,8 +142,10 @@ body {
 .recomendadas-foto{
     width: 100%;
 }
-.foto{
+.fotos{
     width: 23%;
+    margin: 6px;
+    justify-content: space-around;
 }
 
 footer{
