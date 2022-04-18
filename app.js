@@ -1,4 +1,6 @@
 const express = require('express');
+const req = require('express/lib/request');
+const res = require('express/lib/response');
 const app = express();
 const path = require('path');
 
@@ -25,6 +27,13 @@ app.get ("/register", (req,res)=>{
     res.sendFile(path.resolve(__dirname, "./views/register.html"))
 });
 
+/* en el login el boto de olvide mi contraseña */
 app.get ("/forgot", (req,res)=>{
     res.sendFile(path.resolve(__dirname, "./views/forgot.html"))
 });
+
+ /* en el forgot el boton iniciar sesion */
+app.get ("/log", (req,res)=>{
+    res.sendFile(path.resolve(__dirname, "./views/login.html"))
+});
+
