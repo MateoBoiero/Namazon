@@ -28,3 +28,6 @@ app.get ("/register", (req,res)=>{
 app.get ("/forgot", (req,res)=>{
     res.sendFile(path.resolve(__dirname, "./views/forgot.html"))
 });
+app.get ("/carritoCompras", (req,res)=>{
+    res.sendFile(path.resolve(__dirname, "./views/carritoCompras.html"))
+});

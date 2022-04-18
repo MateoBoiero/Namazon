@@ -19,6 +19,10 @@ h5{
     right: 15vw;
 }
 
+.fa-shopping-cart{
+    color: #e7ecef;
+}
+
 .bars{
     font-size: 25px;
     color:#e7ecef;
@@ -141,11 +145,14 @@ body {
 
 .recomendadas-foto{
     width: 100%;
+    display: flex;
+    justify-content: space-around;
 }
 .fotos{
-    width: 23%;
-    margin: 6px;
+    width: 25%;
+    margin: 10px;
     justify-content: space-around;
+    border-radius: 6px;
 }
 
 footer{
