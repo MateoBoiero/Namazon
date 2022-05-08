@@ -30,19 +30,6 @@ app.get ("/register", (req,res)=>{
 app.get ("/forgot", (req,res)=>{
     res.sendFile(path.resolve(__dirname, "./views/forgot.html"))
 });
-<<<<<<< HEAD:app.js
 app.get ("/carritoCompras", (req,res)=>{
     res.sendFile(path.resolve(__dirname, "./views/carritoCompras.html"))
-});
-=======
-
- 
-app.get ("/log", (req,res)=>{
-    res.sendFile(path.resolve(__dirname, "./views/login.html"))
 });*/
-
-app.listen(4000, () =>{
-    console.log('servidor corriendo en http://localhost:4000');
-});
-
->>>>>>> 7543dcba25013ea4ea3d2a46a515b6ad907d3297:src/app.js
