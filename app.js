@@ -9,6 +9,12 @@ app.set('view engine', 'ejs');
 
 app.use(express.static("public"));
 
+app.use("/",mainRouter);
+
+app.listen(4000, () => {
+    console.log("Servidor Corriendo en http://localhost:4000")
+});
+
 /*app.get("/", (req, res)=>{
     res.sendFile(path.resolve(__dirname, "./views/index.html"))
 });
