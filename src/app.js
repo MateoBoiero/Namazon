@@ -9,15 +9,13 @@ app.use(express.urlencoded({ extended: false }));
 
 
 const mainRouter = require("./routes/mainRouter");
- app.set('views', path.resolve(__dirname, 'views')); 
+app.set('views', path.resolve(__dirname, 'views')); 
 
- app.get('/', (req, res) => {
+app.get('/', (req, res) => {
     res.redirect('/')
 });
 
 app.use("/",mainRouter);
-
-
 
 app.listen(4000, () => {
     console.log("Servidor Corriendo en http://localhost:4000")

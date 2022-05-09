@@ -1,3 +1,6 @@
+const fs = require('fs');
+const path = require('path');
+
 const mainController = {
     detalleDeProducto: (req, res)=>{
         res.render('detalleDeProducto')
