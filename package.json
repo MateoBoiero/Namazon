@@ -4,7 +4,7 @@
   "description": "Grupo 9 ñamazon\r Entre todos los integrantes decidimos hacer una ecommerce de venta de series y peliculas\r similar a \"Amazon Prime\".",
   "main": "app.js",
   "scripts": {
-    "test": "nodemon app.js"
+    "test": "nodemon ./src/app.js"
   },
   "repository": {
     "type": "git",
