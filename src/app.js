@@ -1,15 +1,23 @@
 const express = require('express');
 const app = express();
 
+//configuracion
+app.set('view engine', 'ejs');
+app.use(express.static("public"));
 const path = require('path');
+app.use(express.urlencoded({ extended: false }));
+
+
 const mainRouter = require("./routes/mainRouter");
  app.set('views', path.resolve(__dirname, 'views')); 
 
-app.set('view engine', 'ejs');
-
-app.use(express.static("public"));
+ app.get('/', (req, res) => {
+    res.redirect('/')
+});
 
 app.use("/",mainRouter);
+
+
 
 app.listen(4000, () => {
     console.log("Servidor Corriendo en http://localhost:4000")
