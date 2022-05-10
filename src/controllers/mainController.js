@@ -16,6 +16,9 @@ const mainController = {
     },
     register: (req, res)=>{
         res.render('register')
+    },
+    carrito: (req, res)=>{
+        res.render('carrito')
     }
 };
 
