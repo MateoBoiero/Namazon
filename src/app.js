@@ -1,14 +1,15 @@
 const express = require('express');
 const app = express();
+const path = require('path');
 
-//configuracion
+//************configuracion************
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
-const path = require('path');
 app.use(express.urlencoded({ extended: false }));
 
-
+//***********Reuquire*********
 const mainRouter = require("./routes/mainRouter");
+const usersRouter = require('./routes/usersRouter');
 app.set('views', path.resolve(__dirname, 'views')); 
 
 app.get('/', (req, res) => {
@@ -16,6 +17,12 @@ app.get('/', (req, res) => {
 });
 
 app.use("/",mainRouter);
+
+/*Mateo
+app.get ("/login", (req,res)=>{
+    res.sendFile(path.resolve(__dirname, "./views/login.html"))
+});*/
+app.use('/users', usersRouter)
 
 app.listen(4000, () => {
     console.log("Servidor Corriendo en http://localhost:4000")
@@ -29,10 +36,6 @@ app.get("/detalleDeProducto", (req, res)=>{
     res.sendFile(path.resolve(__dirname, "./views/detalleDeProducto.html"))
 });
 
-//Mateo
-app.get ("/login", (req,res)=>{
-    res.sendFile(path.resolve(__dirname, "./views/login.html"))
-});
 
 app.get ("/register", (req,res)=>{
     res.sendFile(path.resolve(__dirname, "./views/register.html"))
