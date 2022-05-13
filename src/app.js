@@ -1,29 +1,24 @@
+//**!      CONFIGURACION    */
 const express = require('express');
 const app = express();
 const path = require('path');
 
-//************configuracion************
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
 
-//***********Reuquire*********
+//**!        REQUIRE         */
 const mainRouter = require("./routes/mainRouter");
 const usersRouter = require('./routes/usersRouter');
+const productsRouter = require('./routes/productsRouter')
 app.set('views', path.resolve(__dirname, 'views')); 
 
-app.get('/', (req, res) => {
-    res.redirect('/')
-});
+//**!        ROUTER          */
+app.use('/', mainRouter);
+app.use('/products', productsRouter);
+app.use('/users', usersRouter);
 
-app.use("/",mainRouter);
-
-/*Mateo
-app.get ("/login", (req,res)=>{
-    res.sendFile(path.resolve(__dirname, "./views/login.html"))
-});*/
-app.use('/users', usersRouter)
-
+//**!       LOCALHOST         */
 app.listen(4000, () => {
     console.log("Servidor Corriendo en http://localhost:4000")
 });

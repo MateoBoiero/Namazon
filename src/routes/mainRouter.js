@@ -5,10 +5,5 @@ const path = require('path');
 const mainController = require("../controllers/mainController.js")
 
 router.get('/', mainController.index);
-router.get('/detalleDeProducto', mainController.detalleDeProducto);
-router.get('/forgot', mainController.forgot);
-router.get('/login', mainController.login);
-router.get('/register', mainController.register);
-router.get('/carrito', mainController.carrito);
 
 module.exports = router;
