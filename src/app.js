@@ -4,14 +4,14 @@ const app = express();
 const path = require('path');
 
 app.set('view engine', 'ejs');
+app.set('views', path.resolve(__dirname, 'views')); 
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
 
 //**!        REQUIRE         */
-const mainRouter = require("./routes/mainRouter");
-const usersRouter = require('./routes/usersRouter');
-const productsRouter = require('./routes/productsRouter')
-app.set('views', path.resolve(__dirname, 'views')); 
+const mainRouter = require('./routes/mainRouter.js');
+const usersRouter = require('./routes/usersRouter.js');
+const productsRouter = require('./routes/productsRouter.js')
 
 //**!        ROUTER          */
 app.use('/', mainRouter);

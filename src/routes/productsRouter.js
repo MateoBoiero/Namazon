@@ -1,10 +1,13 @@
+//**!      CONFIGURACION    */
+
 const express = require("express");
 const router = express.Router();
-const path = require('path');
 
+//**!        REQUIRE         */
 const productsController = require("../controllers/productsController");
 
-router.get('/detalleDeProducto', productsController.detalleDeProducto);
+//**!        CONTROLLERS         */
+router.get('/:num', productsController.detalleDeProducto);
 router.get('/carritoCompras', productsController.carritoCompras)
 
 module.exports = router;
