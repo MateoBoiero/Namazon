@@ -1,22 +1,24 @@
+//**!      CONFIGURACION    */
 const express = require('express');
 const app = express();
-
-//configuracion
-app.set('view engine', 'ejs');
-app.use(express.static("public"));
 const path = require('path');
+
+app.set('view engine', 'ejs');
+app.set('views', path.resolve(__dirname, 'views')); 
+app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
 
+//**!        REQUIRE         */
+const mainRouter = require('./routes/mainRouter.js');
+const usersRouter = require('./routes/usersRouter.js');
+const productsRouter = require('./routes/productsRouter.js')
 
-const mainRouter = require("./routes/mainRouter");
-app.set('views', path.resolve(__dirname, 'views')); 
+//**!        ROUTER          */
+app.use('/', mainRouter);
+app.use('/products', productsRouter);
+app.use('/users', usersRouter);
 
-app.get('/', (req, res) => {
-    res.redirect('/')
-});
-
-app.use("/",mainRouter);
-
+//**!       LOCALHOST         */
 app.listen(4000, () => {
     console.log("Servidor Corriendo en http://localhost:4000")
 });
@@ -29,10 +31,6 @@ app.get("/detalleDeProducto", (req, res)=>{
     res.sendFile(path.resolve(__dirname, "./views/detalleDeProducto.html"))
 });
 
-//Mateo
-app.get ("/login", (req,res)=>{
-    res.sendFile(path.resolve(__dirname, "./views/login.html"))
-});
 
 app.get ("/register", (req,res)=>{
     res.sendFile(path.resolve(__dirname, "./views/register.html"))

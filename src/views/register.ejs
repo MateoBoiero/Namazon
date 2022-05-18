@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%-include('./partials/head') %> 
+    <%-include('./partials/head',{titulo:"Register", css:"register"}) %> 
 
 <body>
-    <form class="formulario" action="/views/login.html" method="post">
+    <form class="formulario" method="post" action="/users/register">
         <h1>Registrate</h1>
         <div class="contenedor">
             <div class="input-contenedor">
@@ -22,7 +22,7 @@
             </div>
             <button type="submit">Registrate</button>
             <p>Al registrarte, aceptas nustras Condiciones de uso y Politica de Privacidad</p>
-            <p>¿Ya tienes Cuenta? <a href="/views/login.html">Iniciar Sesion</a></p>
+            <p>¿Ya tienes Cuenta? <a href="/users/login">Iniciar Sesion</a></p>
         </div>
     </form>
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%-include('./partials/head') %>
+        <%-include('./partials/head',{titulo:"Login", css:"login"}) %> 
 
 <body>
     <div class="image">
@@ -24,7 +24,7 @@
         
         <button class="enviar">Enviar</button>
         <p>Al Iniciar Sesion, aceptas nustras Condiciones de uso y Politica de Privacidad</p>
-        <p><a href="/forgot">Olvide mi Contraseña</a></p>
+        <p><a href="/users/forgot">Olvide mi Contraseña</a></p>
 
     <%-include('./partials/footer') %> 
     </div>
