@@ -7,27 +7,28 @@
     <div class="image">
         <img src="images/niamazon.png" alt="logo Samazon">
     </div>
-    <div class="contenedor">
-        <h1>Login</h1>
-        <label for="usuario">Usuario</label>
-        <input class ="buscador" type="text" name="usuario">
+    <form class="formulario" action="/views/login" method="post">
+        <div class="contenedor">
+            <h1>Login</h1>
+            <label for="usuario">Usuario</label>
+            <input class ="buscador" type="text" name="usuario">
 
-        <label for="Contraseña">Contraseña</label>
-        <input class ="buscador" type="password" name="Contraseña">
+            <label for="Contraseña">Contraseña</label>
+            <input class ="buscador" type="password" name="Contraseña">
 
-        <div class="remember">
-            <label for="check">
-                <input type="checkbox" name="check">
-                Recordar
-            </label>
+            <div class="remember">
+                <label for="check">
+                    <input type="checkbox" name="check">
+                    Recordar
+                </label>
+            </div>
+            
+            <button class="enviar">Enviar</button>
+            <p>Al Iniciar Sesion, aceptas nustras Condiciones de uso y Politica de Privacidad</p>
+            <p><a href="/users/forgot">Olvide mi Contraseña</a></p>
         </div>
-        
-        <button class="enviar">Enviar</button>
-        <p>Al Iniciar Sesion, aceptas nustras Condiciones de uso y Politica de Privacidad</p>
-        <p><a href="/users/forgot">Olvide mi Contraseña</a></p>
-
+    </form>
     <%-include('./partials/footer') %> 
-    </div>
     
 </body>
 </html>
