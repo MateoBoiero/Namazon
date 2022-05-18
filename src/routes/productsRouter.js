@@ -7,7 +7,8 @@ const router = express.Router();
 const productsController = require("../controllers/productsController");
 
 //**!        CONTROLLERS         */
-router.get('/:num', productsController.detalleDeProducto);
+/* router.get('/:num', productsController.detalleDeProducto); */
+router.get('/detalleDeProducto', productsController.detalleDeProducto)
 router.get('/carritoCompras', productsController.carritoCompras)
 
 module.exports = router;
