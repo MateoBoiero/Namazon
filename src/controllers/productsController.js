@@ -9,6 +9,9 @@ const productsController = {
     carritoCompras: (req,res)=>{
         return res.render('carritoCompras')
     },
+    crearProductos: (req, res)=>{
+        res.render('crearProductos')
+    }
     //Agregar add, edit, destroy, create
 }
 
