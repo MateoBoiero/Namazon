@@ -87,3 +87,16 @@ footer{
     margin-bottom: 1rem;
     text-align: center;
 }
+
+
+@media (min-width:500px) {
+    h3{
+        font-size: 1.5rem;
+    }
+    .descripcion{
+        font-size: 1rem;
+    }
+    .precio{
+        font-size: 0.75rem;
+    }
+}
