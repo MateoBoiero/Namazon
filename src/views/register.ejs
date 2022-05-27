@@ -4,7 +4,7 @@
 <%-include('./partials/head',{titulo:"Register", css:"register"}) %> 
 
 <body>
-    <form class="formulario" method="post" action="/users/register">
+    <form class="formulario" method="post" action="/users/register" enctype="multipart/form-data">
         <h1>Registrate</h1>
         <div class="contenedor">
             <div class="input-contenedor">
@@ -19,6 +19,8 @@
                 <i class="fa-solid fa-key"></i>
                 <input type="password" name="password" id="password" placeholder="Contraseña">
                 <br>
+
+                <input type="file" name="groups-images" id="image">
             </div>
             <button type="submit">Registrate</button>
             <p>Al registrarte, aceptas nustras Condiciones de uso y Politica de Privacidad</p>
