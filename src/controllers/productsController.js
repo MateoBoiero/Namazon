@@ -4,13 +4,14 @@ const path = require('path');
 const productsController = {
     detalleDeProducto: (req, res)=>{
         let productoId = req.params.num;
-        res.render('Detalle del producto' + productoId);
+        res.send('Detalle del producto ' + productoId);
     },
     carritoCompras: (req,res)=>{
         return res.render('carritoCompras')
     },
     crearProductos: (req, res)=>{
-        res.render('crearProductos')
+       console.log("bruno se la come");
+        return res.render('crearProductos')
     }
     //Agregar add, edit, destroy, create
 }

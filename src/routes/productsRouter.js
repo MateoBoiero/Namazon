@@ -7,8 +7,8 @@ const router = express.Router();
 const productsController = require("../controllers/productsController");
 
 //**!        CONTROLLERS         */
-router.get('/:num', productsController.detalleDeProducto);
 router.get('/carritoCompras', productsController.carritoCompras)
 router.get('/crearProductos', productsController.crearProductos)
-
+/*SIEMPRE VA ULTIMA ESTA*/
+router.get('/:num', productsController.detalleDeProducto);
 module.exports = router;
