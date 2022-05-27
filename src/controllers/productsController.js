@@ -10,7 +10,6 @@ const productsController = {
         return res.render('carritoCompras')
     },
     crearProductos: (req, res)=>{
-       console.log("bruno se la come");
         return res.render('crearProductos')
     }
     //Agregar add, edit, destroy, create

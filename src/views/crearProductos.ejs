@@ -1,8 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+    <%-include('./partials/head',{titulo:"Crear productos", css:"crearProductos"}) %>
+    <%-include('./partials/header') %>
 
-    <%-include('./partials/head',{titulo:"crearProductos", css:"crearProductos"}) %> 
-    <%-include('./partials/header') %> 
-<h1>tiagolameme las bolas</h1>
-    <%-include('./partials/footer') %> 
+        <body>
+            <h1 class="title">Crear Producto</h1>
+            <div class="conteinerGeneral">
+                <div class="input">
+                    <input type="text" name="name" placeholder="Nombre de la pelicula">
+                </div>
+                <div class="input">
+                    <input type="text" name="description" placeholder="Descripcion">
+                </div>
+                <div class="input">
+                    <input type="file" name="image" accept=".jpg, .png, .jpeg" placeholder="Imagen del producto">
+                </div>
+                <div class="input">
+                    <input type="text" name="category" placeholder="Genero">
+                </div>
+                <div class="input">
+                    <input type="text" name="price" placeholder="Precio">
+                </div>
+                <div class="button">
+                    <button type="submit">Crear</button>
+                </div>
+            </div>
+        </body>
+    <%-include('./partials/footer') %>
+
 </html>
