@@ -10,8 +10,10 @@ const productsController = {
     },
     crearProductos: (req, res)=>{
         res.render('crearProductos')
+    },
+    tienda: (req, res)=>{
+        res.send(req.body)
     }
-    //Agregar add, edit, destroy, create
 }
 
 module.exports = productsController;

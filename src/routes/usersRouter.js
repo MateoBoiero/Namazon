@@ -16,7 +16,7 @@ const storage = multer.diskStorage({
         const newFilename = 'groups-' + Date.now() + path.extname(file.originalname);
         cb(null, newFilename)
     }
-})
+});
 
 const upload = multer({storage:storage});
 
@@ -24,7 +24,7 @@ const upload = multer({storage:storage});
 router.get('/login',userController.login);
 
 router.get('/register',userController.register);
-router.post('/register',upload.single('groups-images'), userController.processRegister);
+router.post('/register', upload.single('groups-images'), userController.processRegister);
 
 router.get('/forgot',userController.forgot);
 
