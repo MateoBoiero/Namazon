@@ -2,6 +2,8 @@
 
 const express = require("express");
 const router = express.Router();
+const multer = require("multer");
+const path = require("path");
 
 //**!        REQUIRE         */
 const productsController = require("../controllers/productsController");
@@ -10,7 +12,7 @@ const productsController = require("../controllers/productsController");
 /* carrito de compras */
 router.get('/carritoCompras', productsController.carritoCompras)
 
-router.get('/crearProductos', productsController.crearProductos)
+router.get('/create', productsController.create);
 router.post('/', productsController.tienda)
 
 

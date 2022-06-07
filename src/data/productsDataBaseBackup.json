@@ -1,0 +1,23 @@
+[ 
+    {
+        "id": 1,
+        "name": "ToyStory",
+        "price": "$599,00",
+        "description":"Los juguetes de Andy, un niño de seis años, temen que un nuevo regalo les sustituya en el corazón de su dueño. Woody, un vaquero que ha sido hasta ahora el juguete favorito, trata de tranquilizarlos hasta que aparece Buzz Lightyear",
+        "image": "ToyStory.jpg"
+    },
+    {
+        "id": 2,
+        "name": "proyectoX",
+        "price": "$799,00",
+        "description":"Tres estudiantes de secundaria deciden organizar una fiesta salvaje en casa de uno de ellos, aprovechando que sus padres no están. Quieren hacer que la fiesta sea inolvidable, así que deciden grabarlo todo.",
+        "image": "proyectoX.jpg"
+    },
+    {
+        "id": 3,
+        "name": "rapidosFuriosos",
+        "price": "$999,00",
+        "description":"Fast & Furious es una franquicia de medios estadounidense centrada en una serie de películas de acción que se ocupan en gran medida de carreras automovilísticas callejeras ilegales.",
+        "image": "rapidosFuriosos.jpg"
+    }
+]

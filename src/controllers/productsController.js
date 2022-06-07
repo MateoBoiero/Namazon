@@ -8,8 +8,8 @@ const productsController = {
     carritoCompras: (req,res)=>{
         return res.render('carritoCompras')
     },
-    crearProductos: (req, res)=>{
-        res.render('crearProductos')
+    create: (req, res)=>{
+        res.render('products-create')
     },
     tienda: (req, res)=>{
         res.send(req.body)
