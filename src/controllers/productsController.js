@@ -3,7 +3,9 @@ const path = require('path');
 
 const productsController = {
     detalleDeProducto: (req, res)=>{
-        return res.render('detalleDeProducto');
+        let productoId = req.params.num;
+        res.send('Detalle del producto ' + productoId);
+
     },
     carritoCompras: (req,res)=>{
         return res.render('carritoCompras')
@@ -13,6 +15,10 @@ const productsController = {
     },
     tienda: (req, res)=>{
         res.send(req.body)
+    },
+    crearProductos: (req, res)=>{
+        return res.render('crearProductos')
+
     }
 }
 
