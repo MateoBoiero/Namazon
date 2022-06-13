@@ -16,9 +16,8 @@ const productsController = {
     tienda: (req, res)=>{
         res.send(req.body)
     },
-    crearProductos: (req, res)=>{
-        return res.render('crearProductos')
-
+    edit: (req, res) =>{
+        res.render('products-edit')
     }
 }
 
