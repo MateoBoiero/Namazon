@@ -19,4 +19,5 @@ const userController= {
         return res.render('forgot')
     },
 }
+
 module.exports = userController;
