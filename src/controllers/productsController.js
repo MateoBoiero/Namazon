@@ -2,6 +2,11 @@ const fs = require('fs');
 const path = require('path');
 
 const productsController = {
+    // Root - Show all products    
+    index: (req, res) => {
+		res.render('index')
+	},
+    
     detalleDeProducto: (req, res)=>{
         let productoId = req.params.num;
         res.send('Detalle del producto ' + productoId);
