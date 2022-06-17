@@ -10,13 +10,14 @@ const productsController = require("../controllers/productsController");
 
 //**!        CONTROLLERS         */
 /* carrito de compras */
-router.get('/carritoCompras', productsController.carritoCompras)
+router.get('/carritoCompras', productsController.carritoCompras);
 
 router.get('/create', productsController.create);
 router.post('/', productsController.tienda);
 router.post('/edit', productsController.edit);
 
+
 /* Listado de productos */
-router.get('/detalleDeProducto', productsController.detalleDeProducto)
+router.get('/detalleDeProducto', productsController.detalleDeProducto);
 
 module.exports = router;

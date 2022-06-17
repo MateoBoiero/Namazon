@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
-
-const productsController = {
+/* const products = JSON.parse(fs.readFileSync('../data/productsDataBase.json', 'utf-8')); */
+const productsController = {    
     detalleDeProducto: (req, res)=>{
         let productoId = req.params.num;
         res.send('Detalle del producto ' + productoId);

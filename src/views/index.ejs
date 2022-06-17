@@ -1,69 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%-include('./partials/head',{titulo:"Home", css:"styles"}) %> 
-<%-include('./partials/header') %> 
+<%-include('./partials/head',{titulo:"Home", css:"styles"}) %>
+    <%-include('./partials/header') %>
 
+        <body>
+            <!-- DINAMICO -->
+            <div class="conteinerGeneral">
+                <% products.forEach(function(product){%>
+                    <a href="/products/detalleDeProducto/<%=product.id%>">
 
-<body>
-    <div class="conteinerGeneral">
-        <a href="/products/detalleDeProducto">
- 
-        <div class="foto">
-            <img class="imagen" style="width: 90%;" src="/images/ToyStory.jpg" alt="toy story">
-        </div>
-        <div class="info">
-            <h3>Toy Story</h3>
-            <P class="descripcion">
-                Los juguetes de Andy, un niño de seis años, temen que un nuevo regalo
-                les sustituya en el corazón de su dueño. Woody, un vaquero que ha
-                sido hasta ahora el juguete favorito, trata de tranquilizarlos hasta
-                que aparece Buzz Lightyear
-            </P>
-            <p class="precio">
-                $599,00
-            </p>
-        </div>
-    </a>
-    </div>
-    <div class="conteinerGeneral">
-        <a href="/products/detalleDeProducto">
-        <div class="foto">
-            <img class="imagen" src="/images/proyectoX.jpg" alt="proyecto x">
-        </div>
-        <div class="info">
-            <h3>Proyecto X</h3>
-            <P class="descripcion">
-                Tres estudiantes de secundaria deciden organizar una fiesta salvaje
-                en casa de uno de ellos, aprovechando que sus padres no están.
-                Quieren hacer que la fiesta sea inolvidable, así que deciden grabarlo
-                todo.
-            </P>
-            <p class="precio">
-                $799,00
-            </p>
-        </div>
-        </a>
-    </div>
-    <div class="conteinerGeneral">
-        <a href="/products/detalleDeProducto">
-        <div class="foto">
-            <img class="imagen" src="/images/rapidosFuriosos.jpg" alt="Rapidos y furiosos">
-        </div>
-        <div class="info">
-            <h3>Rapidos y Furiosos</h3>
-            <P class="descripcion">
-                Fast & Furious es una franquicia de medios estadounidense centrada en
-                una serie de películas de acción que se ocupan en gran medida de carreras
-                automovilísticas callejeras ilegales.
-            </P>
-            <p class="precio">
-                $999,00
-            </p>
-        </div>
-        </a>
-    </div>
-
-</body>
-<%-include('./partials/footer') %> 
+                        <figure class="foto">
+                            <img src="/images/products/<%= product.image %>" alt="imagen de producto">
+                        </figure>
+                        <div class="info">
+                            <h3>
+                                <%=product.name %>
+                            </h3>
+                            <p class="descripcion">
+                                <%=product.description%>
+                            </p>
+                            <p class="precio">
+                                <%=product.price%>
+                            </p>
+                        </div>
+                    </a>
+                    <% }) %>
+            </div>
+        </body>
+        <%-include('./partials/footer') %>
 
 </html>
