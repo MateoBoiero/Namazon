@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<%-include('. /partials/head',{titulo:"Home", css:"styles"}) %>
-    <%-include('. /partials/header') %>
+<%-include('./partials/head',{titulo:"Home", css:"styles"}) %>
+    <%-include('./partials/header') %>
 
         <body>
             <!-- DINAMICO -->
             <div class="conteinerGeneral">
-                <% visited.forEach(function(product){%>
+                <% products.forEach(function(product){%>
                     <a href="/products/detalleDeProducto/<%=product.id%>">
 
                         <figure class="foto">
@@ -14,7 +14,7 @@
                         </figure>
                         <div class="info">
                             <h3>
-                                <%= product.name %>
+                                <%=product.name %>
                             </h3>
                             <p class="descripcion">
                                 <%=product.description%>
@@ -27,6 +27,6 @@
                     <% }) %>
             </div>
         </body>
-        <%-include('. /partials/footer') %>
+        <%-include('./partials/footer') %>
 
 </html>

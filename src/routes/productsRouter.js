@@ -17,6 +17,7 @@ router.post('/', productsController.tienda);
 router.post('/edit', productsController.edit);
 router.get('/edit', productsController.edit);
 
+
 /* Listado de productos */
 router.get('/detalleDeProducto', productsController.detalleDeProducto);
 
