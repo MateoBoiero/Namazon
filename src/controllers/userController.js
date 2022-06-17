@@ -1,5 +1,9 @@
+const express = require('express');
+const {validationResult} = require('express-validator');
 const fs = require('fs');
 const path = require('path');
+const datapath = path.join(__dirname,'../data/users')
+const usersModel = JSON.parse(fs.readFileSync(datapath, {encoding: 'utf-8'}));
 
 const userController= {
     login: (req,res)=>{
@@ -10,10 +14,9 @@ const userController= {
     },
     /* req.body viene del file en el router */
     processRegister:(req,res)=>{
-        console.log(req.file)
-        let registerBody = req.body;
-        let registerID = create(registerBody);
-        res.redirect('register/'+registerID)
+        let errors = validationResult(req);
+        let users = req.body;
+        userid = usersModel.create(users)
     },
     forgot: (req,res)=>{
         return res.render('forgot')
