@@ -35,9 +35,6 @@ const productsController = {
         .then(()=> {
             return res.redirect('/')})            
         .catch(error => res.send(error))
-       
-       
-        /* res.render('products-create') */
     },
     tienda: (req, res)=>{
         res.send(req.body)
