@@ -13,7 +13,9 @@ const mainController = {
         .catch(error=>{
             res.send(error)
         })
-        /* res.render('index',{products:productsJSON}); */
+
+        res.render('index',{products:productsJSON});
+
     }
 };
 
