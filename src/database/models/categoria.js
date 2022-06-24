@@ -1,7 +1,7 @@
 module.exports = (sequelize, dataTypes) => {
    
    
-    let alias = 'categorias';
+    let alias = 'categoria';
     let cols = {
         id: {
             type: dataTypes.BIGINT(10).UNSIGNED,
@@ -15,9 +15,9 @@ module.exports = (sequelize, dataTypes) => {
         }
     };
     let config = {
-        tableName: "categorias",
+        tableName: "categoria",
         timestamps: false
     }
-    const categorias = sequelize.define(alias, cols, config);
-    return categorias
+    const categoria = sequelize.define(alias, cols, config);
+    return categoria
 };
