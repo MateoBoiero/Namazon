@@ -20,7 +20,7 @@ module.exports = (sequelize, dataTypes) => {
         tableName: "actores",
         timestamps: false
     }
-    const Genero = sequelize.define(alias, cols, config);
+    const Actor = sequelize.define(alias, cols, config);
 
     /* Genre.associate = function(models) {
         Genre.hasMany(models.Movie,{

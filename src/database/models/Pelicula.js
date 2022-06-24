@@ -34,7 +34,7 @@ module.exports = (sequelize, dataTypes) => {
         tableName: "peliculas",
         timestamps: false
     }
-    const Genero = sequelize.define(alias, cols, config);
+    const Pelicula = sequelize.define(alias, cols, config);
 
     /* Genre.associate = function(models) {
         Genre.hasMany(models.Movie,{
