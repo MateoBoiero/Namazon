@@ -5,7 +5,12 @@ const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 const moment = require('moment');
 
-/* const products = JSON.parse(fs.readFileSync('../data/productsDataBase.json', 'utf-8')); */
+
+const Peliculas = db.Pelicula;
+const Categorias = db.Categoria;
+const Genero = db.Genero;
+const Usuarios = db.Usuario;
+
 const productsController = {    
     detalleDeProducto: (req, res)=>{
         let productoId = req.params.num;
@@ -15,7 +20,24 @@ const productsController = {
         return res.render('carritoCompras')
     },
     create: (req, res)=>{
-        res.render('products-create')
+        Peliculas
+        .create(
+            {
+                nombre: req.body.nombre,
+                imagen: req.body.imagen,
+                descripcion: req.body.descripcion,
+                precio: req.body.precio,
+                rating: req.body.rating,
+                idGenero: req.body.idGenero,
+                idActor: req.body.idActor
+            }
+        )
+        .then(()=> {
+            return res.redirect('/')})            
+        .catch(error => res.send(error))
+       
+       
+        /* res.render('products-create') */
     },
     tienda: (req, res)=>{
         res.send(req.body)
