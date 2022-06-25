@@ -12,9 +12,10 @@ const productsController = require("../controllers/productsController");
 /* carrito de compras */
 router.get('/carritoCompras', productsController.carritoCompras);
 
-router.get('/create', productsController.create);
+router.post('/create', productsController.create);
 router.post('/', productsController.tienda);
 router.post('/edit', productsController.edit);
+
 
 
 /* Listado de productos */

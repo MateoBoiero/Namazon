@@ -1,5 +1,6 @@
 module.exports = (sequelize, dataTypes) => {
     let alias = 'Pelicula';
+
     let cols = {
         id: {
             type: dataTypes.BIGINT(10).UNSIGNED,
@@ -12,35 +13,37 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         imagen: {
-            type: dataTypes.STRING(255),
+            type: dataTypes.STRING(500),
             allowNull: false
         },
         descripcion: {
-            type: dataTypes.STRING(255),
-            allowNull: true
+            type: dataTypes.STRING(500),
+            allowNull: false
         },
-        precio: {
-            type: BigInt(10).UNSIGNED,
+        precio:{
+            type: dataTypes.BIGINT(10).UNSIGNED,
             allowNull: false
         },
         rating: {
-            type: BigInt(10).UNSIGNED,
-            allowNull: true
+            type: dataTypes.DECIMAL(3, 1).UNSIGNED,
+            allowNull: false
         },
-        idGenero: dataTypes.BIGINT(10),
-        idActor: dataTypes.BIGINT(10),  
-    };
+        idGenero:{
+            type: dataTypes.BIGINT(10).UNSIGNED,
+        primaryKey: true,
+        allowNull: false,
+        autoIncrement: false
+        },
+        idActor: {type: dataTypes.BIGINT(10).UNSIGNED,
+            primaryKey: true,
+            allowNull: false,
+            autoIncrement: false
+        }
+    }
     let config = {
-        tableName: "peliculas",
+        tableName:'Pelicula',
         timestamps: false
     }
-    const Pelicula = sequelize.define(alias, cols, config);
-
-    /* Genre.associate = function(models) {
-        Genre.hasMany(models.Movie,{
-            as:"movies",
-            foreignKey:"genre_id"
-        })
-    } */
-    return Pelicula
+    const Movie = sequelize.define(alias,cols,config);
+    return Movie
 };
