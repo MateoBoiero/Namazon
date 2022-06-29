@@ -32,7 +32,7 @@ module.exports = (sequelize,DataTypes)=>{
         idCategoria: dataTypes.BIGINT(10), 
     };
     let config = {
-        tableName: "ueliculas",
+        tableName: "peliculas",
         timestamps: false
     }
     const Usuario = sequelize.define(alias, cols, config);
