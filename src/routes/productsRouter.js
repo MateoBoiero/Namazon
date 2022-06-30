@@ -10,19 +10,19 @@ const productsController = require("../controllers/productsController");
 
 //**!        CONTROLLERS         */
 /* carrito de compras */
-router.get('/movies/new', moviesController.new);
-router.get('/movies/recommended', moviesController.recomended);
-router.get('/movies/detail/:id', moviesController.detail);
+router.get('/peliculas/new', moviesController.new);
+router.get('/peliculas/recommended', productsController.recomended);
+router.get('/peliculas/detail/:id', productsController.detail);
 
 
 //Rutas exigidas para la creación del CRUD
-router.get('/movies/add', moviesController.add);
-router.post('/movies/create', moviesController.create);
+router.get('/peliculas/add', productsController.add);
+router.post('/peliculas/create', productsController.create);
 
-router.get('/movies/edit/:id', moviesController.edit);
-router.post('/movies/update/:id', moviesController.update);
+router.get('/peliculas/edit/:id', productsController.edit);
+router.post('/peliculas/update/:id', productsController.update);
 
-router.get('/movies/delete/:id', moviesController.delete);
-router.post('/movies/delete/:id', moviesController.destroy);
+router.get('/peliculas/delete/:id', productsController.delete);
+router.post('/peliculas/delete/:id', productsController.destroy);
 
 module.exports = router;
