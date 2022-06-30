@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%-include('./partials/head', {titulo:"Listado", css:""}) %>  <!--*! falta agregar css -->
+<%-include('./partials/header') %>
+
+<body>
+
+    <h1 class="titulo">Película Editada:  <%= Pelicula.nombre %></h1>
+    <section class="formulario">
+        <form action="/Peliculas/update/<%= Pelicula.id %>" method="POST">
+            <label for="title">Titulo de la Pelicula </label>
+            <p><input type="text" name="title" id="" value="<%= Pelicula.nombre %>" required></p>
+            <label for="rating">Rating </label>
+            <p><input type="number" name="rating" id="" value="<%= Pelicula.rating %>" required></p>
+            <label for="awards">Precio </label>
+            <p><input type="number" name="awards" id="" value="<%= Pelicula.precio %>" required></p>
+            <label for="description">Descripcion </label>
+            <p><input type="text" name="description" id="" value="<%= Pelicula.description %> required"></p>
+            <p>
+                <select name="genre_id" id="" required>
+                    <% allGeneros.forEach(genero => { %>
+                    <option value="<%= genero.id %>" <% if (Pelicula.genero.id == genero.id) { %><%= 'selected' %><% }; %>><%= genero.genero %></option>
+                    <% }); %>
+                </select>
+            </p>
+
+    <!--
+            <label for="genre_id">Genre ID </label>
+            <p><input type="number" name="genre_id" id="" value="<%= Movie.genre_id %>"></p>
+        -->
+            
+            <br>
+            <p> <button class="botonAgregar" type="submit">Actualizar</button>
+        
+            <a  class="botonVolver" href="/movies">Listado de Películas</a></p>
+        </form>
+    </section>
+</body>
+
+</html>
