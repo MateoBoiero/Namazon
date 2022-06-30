@@ -18,11 +18,11 @@ module.exports = (sequelize, dataTypes) => {
     }
     const Genero = sequelize.define(alias, cols, config);
 
-    /* Genre.associate = function(models) {
-        Genre.hasMany(models.Movie,{
-            as:"movies",
-            foreignKey:"genre_id"
+    Genero.associate = function(models) {
+        Genero.hasMany(models.Pelicula,{
+            as:"generos",
+            foreingKey:"idGenero"
         })
-    } */
+    }
     return Genero
 };

@@ -44,6 +44,17 @@ module.exports = (sequelize, dataTypes) => {
         tableName:'Pelicula',
         timestamps: false
     }
-    const Movie = sequelize.define(alias,cols,config);
-    return Movie
+    const Pelicula = sequelize.define(alias,cols,config);
+    Pelicula.assosiate = function(models) {
+        Pelicula.belongsTo(models.Genero,{
+            as:"generos",
+            foreingKey:"idGenero"
+        }),
+        Pelicula.belongsTo(models.Actor,{
+         as:"actores",
+         foreignKey:"idActor"
+         })
+     };
+    
+    return Pelicula
 };
