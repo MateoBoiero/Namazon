@@ -9,13 +9,9 @@ const path = require("path");
 const productsController = require("../controllers/productsController");
 
 //**!        CONTROLLERS         */
+
 /* carrito de compras */
-router.get('/peliculas/new', moviesController.new);
-router.get('/peliculas/recommended', productsController.recomended);
 router.get('/peliculas/detail/:id', productsController.detail);
-
-
-//Rutas exigidas para la creación del CRUD
 router.get('/peliculas/add', productsController.add);
 router.post('/peliculas/create', productsController.create);
 

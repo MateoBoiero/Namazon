@@ -1,6 +1,6 @@
 const { stringify } = require("nodemon/lib/utils");
 
-module.exports = (sequelize,DataTypes)=>{
+module.exports = (sequelize,dataTypes)=>{
     let alias = "Usuario";
     let cols = {
         id: {
