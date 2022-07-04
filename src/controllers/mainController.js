@@ -8,7 +8,7 @@ const sequelize = db.sequelize;
 const Pelicula = db.Pelicula
 
 const mainController = {
-    'index': (req, res)=>{
+    index: (req, res)=>{
         db.Pelicula.findAll()
         .then(pelicula=>{
             res.render('listado.ejs',{pelicula:pelicula})
