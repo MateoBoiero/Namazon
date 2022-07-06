@@ -6,10 +6,10 @@ const { Op } = require("sequelize");
 const moment = require('moment');
 
 
-const Peliculas = db.Pelicula;
+/* const Peliculas = db.Pelicula;
 const Categorias = db.Categoria;
 const Genero = db.Genero;
-const Usuarios = db.Usuario;
+const Usuarios = db.Usuario; */
 
 const productsController = {    
     list: (req, res) => {

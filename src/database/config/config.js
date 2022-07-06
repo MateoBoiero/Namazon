@@ -2,7 +2,7 @@ module.exports = {
   "development": {
     "username": "root",
     "password": null,
-    "database": "namazon",
+    "database": "namazon_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

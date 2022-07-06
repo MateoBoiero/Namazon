@@ -22,11 +22,11 @@ module.exports = (sequelize, dataTypes) => {
     }
     const Actor = sequelize.define(alias, cols, config);
 
-    Actor.associate = function(models) {
+    /* Actor.associate = function(models) {
         Actor.hasMany(models.Pelicula,{
             as:"actores",
             foreignKey:"idActor"
         })
-    }
+    } */
     return Actor
 };

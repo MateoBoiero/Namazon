@@ -11,12 +11,15 @@ const mainController = {
     index: (req, res)=>{
         db.Pelicula.findAll()
         .then(pelicula=>{
-            res.render('listado.ejs',{pelicula:pelicula})
+            res.render('list.ejs',{pelicula:pelicula})
         })
         .catch(error=>{
             res.send(error)
         })
     }
+    /* index: (req, res)=>{
+        res.render('list');
+    } */
 };
 
 module.exports = mainController;
