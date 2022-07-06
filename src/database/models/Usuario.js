@@ -1,6 +1,6 @@
 const { stringify } = require("nodemon/lib/utils");
 
-module.exports = (sequelize,DataTypes)=>{
+module.exports = (sequelize,dataTypes)=>{
     let alias = "Usuario";
     let cols = {
         id: {
@@ -37,8 +37,8 @@ module.exports = (sequelize,DataTypes)=>{
     }
     const Usuario = sequelize.define(alias, cols, config);
 
-    usuario.associate = function(models){
-        usuario.belongsTo(models.categoria,{
+    Usuario.associate = function(models){
+        Usuario.belongsTo(models.Categoria,{
             as:"categorias",
             foreignKey:"idCategoria"
         })

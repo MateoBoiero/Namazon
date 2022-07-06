@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%-include('./partials/head', {titulo:"Listado", css:""}) %>  <!--*! falta agregar css -->
+<%-include('./partials/header') %> 
+
+<body>
+    <h1>LISTADO DE PELÍCULAS</h1>
+    <br>
+    <p>
+        <a class="botonAgregar" href="/peliculas/add">Agregar una Pelicula</a>
+        <a class="botonVolver" href="/">inicio</a>
+
+    </p>
+    <br>
+    <ul>
+        <% for( let i = 0; i < peliculas.length; i++ ) { %>
+        <li>
+            <a href="/peliculas/detail/<%= peliculas[i].id %>"><%= peliculas[i].nombre %></a>
+        </li>
+        <% } %>
+
+    </ul>
+</body>
+
+</html>

@@ -9,16 +9,16 @@ const path = require("path");
 const productsController = require("../controllers/productsController");
 
 //**!        CONTROLLERS         */
+
 /* carrito de compras */
-router.get('/carritoCompras', productsController.carritoCompras);
+router.get('/peliculas/detail/:id', productsController.detail);
+router.get('/peliculas/add', productsController.add);
+router.post('/peliculas/create', productsController.create);
 
-router.post('/create', productsController.create);
-router.post('/', productsController.tienda);
-router.post('/edit', productsController.edit);
+router.get('/peliculas/edit/:id', productsController.edit);
+router.post('/peliculas/update/:id', productsController.update);
 
-
-
-/* Listado de productos */
-router.get('/detalleDeProducto', productsController.detalleDeProducto);
+router.get('/peliculas/delete/:id', productsController.delete);
+router.post('/peliculas/delete/:id', productsController.destroy);
 
 module.exports = router;

@@ -86,6 +86,27 @@ footer{
     color: #e7ecef;
     margin-bottom: 1rem;
     text-align: center;
+} 
+
+/* peliculas */
+.botonAgregar , .botonModificar{
+    color: white;
+    background-color: green;
+    padding: 10px;
+    border-radius: 10px;
+}
+.botonVolver{
+    color: white;
+    background-color: #00B7FF;
+    padding: 10px;
+    border-radius: 10px;
+}
+.titulo{
+    text-align: center;
+}
+.formulario{
+    margin: auto;
+    width: 20%;
 }
 
 
