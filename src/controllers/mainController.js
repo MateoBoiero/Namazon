@@ -11,7 +11,7 @@ const mainController = {
     index: (req, res)=>{
         db.Pelicula.findAll()
         .then(pelicula=>{
-            res.render('listado.ejs',{pelicula:pelicula})
+            res.render('index.ejs',{pelicula:pelicula})
         })
         .catch(error=>{
             res.send(error)

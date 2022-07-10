@@ -1,9 +1,14 @@
-const express = require('express');
 const {validationResult} = require('express-validator');
+const req = require('express/lib/request');
 const fs = require('fs');
-const path = require('path');
-const datapath = path.join(__dirname,'../data/users.json')
-const users = JSON.parse(fs.readFileSync(datapath, {encoding: 'utf-8'}));
+let bcrypt = require('bcrypt');
+/* const datapath = path.join(__dirname,'../data/users.json') */
+const db = require('../database/models');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
+
+const Genero = db.Genero;
+const Usuarios = db.Usuario;
 
 const userController= {
     login: (req,res)=>{
@@ -15,18 +20,19 @@ const userController= {
     /* req.body viene del file en el router */
     processRegister:(req,res)=>{
         let errors = validationResult(req);
-        let usuario = {
+        db.Usuario.create =({
     
             id: users[users.length-1].id+1,
-            usuario: req.body.usuario,
-            password: req.body.password,
+            nombre: req.body.nombre,
+            apellido: req.body.nombre,
+            constraseña: bcrypt.hashSync(req.body.constraseña, 10),
             email:req.body.email,
-            groupsImages: req.file ? req.file.filename : "default.png"
+            imagenUsuario: req.file ? req.file.filename : "default.png"
         
-        }
-        users.push(usuario)
+        }).then(usuario=>{
+            res.redirect('/')
+        })
         fs.writeFileSync(datapath, JSON.stringify(users, null, " "))
-        res.redirect('/')
     },
     forgot: (req,res)=>{
         return res.render('forgot')
