@@ -27,25 +27,19 @@ module.exports = (sequelize, dataTypes) => {
         rating: {
             type: dataTypes.DECIMAL(3, 1).UNSIGNED,
             allowNull: false
-        },
-        idGenero:{
+        }
+       /*  idGenero:{
             type: dataTypes.BIGINT(10).UNSIGNED,
-        primaryKey: true,
-        allowNull: false,
-        autoIncrement: false
         },
         idActor: {type: dataTypes.BIGINT(10).UNSIGNED,
-            primaryKey: true,
-            allowNull: false,
-            autoIncrement: false
-        }
+        } */
     }
     let config = {
-        tableName:'Pelicula',
+        tableName:'peliculas',
         timestamps: false
     }
     const Pelicula = sequelize.define(alias,cols,config);
-    Pelicula.assosiate = function(models) {
+    /* Pelicula.assosiate = function(models) {
         Pelicula.belongsTo(models.Genero,{
             as:"generos",
             foreingKey:"idGenero"
@@ -54,7 +48,7 @@ module.exports = (sequelize, dataTypes) => {
          as:"actores",
          foreignKey:"idActor"
          })
-     };
+     }; */
     
     return Pelicula
 };

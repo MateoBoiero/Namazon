@@ -4,10 +4,10 @@ const db = require('../database/models');
 const sequelize = db.sequelize;
 
 
-const Peliculas = db.Pelicula;
+/* const Peliculas = db.Pelicula;
 const Categorias = db.Categoria;
-const Generos = db.Genero;
-const Usuarios = db.Usuario;
+const Genero = db.Genero;
+const Usuarios = db.Usuario; */
 
 const productsController = {    
     list: (req, res) => {
@@ -29,7 +29,7 @@ const productsController = {
         .then(generos=>{
             res.render('add.ejs', {allGeneros:generos})
         })
-        res.render('/add')  
+        /* res.render('/add')   */
     },
     create: function (req, res) {
         db.Pelicula.create({
