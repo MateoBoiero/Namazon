@@ -16,16 +16,16 @@
     <ul>
         <% for( let i = 0; i < pelicula.length; i++ ) { %>
         <li>
-            <a href="/peliculas/detail/<%= pelicula[i].id %>"><%= pelicula[i].nombre %></a>
+            <a class="nombrePelicula" href="/peliculas/detail/<%= pelicula[i].id %>"><%= pelicula[i].nombre %></a>
         </li>
         <li>
-            <p><%=pelicula[i].imagen %></p>
+            <p class="imagenPelicula"><%=pelicula[i].imagen %></p>
         </li>
         <li>
-            <p><%=pelicula[i].descripcion %></p>
+            <p class="descripcionPelicula"><%=pelicula[i].descripcion %></p>
         </li>
         <li>
-            <p>$<%=pelicula[i].precio %></p>
+            <p class="precioPelicula">$<%=pelicula[i].precio %></p>
         </li>
         <% } %>
 
