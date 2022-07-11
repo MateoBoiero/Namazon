@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%-include('./partials/head', {titulo:"Listado", css:""}) %>  <!--*! falta agregar css -->
+<%-include('./partials/head', {titulo:"Listado", css:"list"}) %>  <!--*! falta agregar css -->
 <%-include('./partials/header') %> 
 
 <body>
@@ -17,6 +17,15 @@
         <% for( let i = 0; i < pelicula.length; i++ ) { %>
         <li>
             <a href="/peliculas/detail/<%= pelicula[i].id %>"><%= pelicula[i].nombre %></a>
+        </li>
+        <li>
+            <p><%=pelicula[i].imagen %></p>
+        </li>
+        <li>
+            <p><%=pelicula[i].descripcion %></p>
+        </li>
+        <li>
+            <p>$<%=pelicula[i].precio %></p>
         </li>
         <% } %>
 

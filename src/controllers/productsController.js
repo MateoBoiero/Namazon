@@ -31,7 +31,7 @@ const productsController = {
         .then(generos=>{
             res.render('add.ejs', {allGeneros:generos})
         })
-        res.render('/add')  
+        /* res.render('/add')   */
     },
     create: function (req, res) {
         db.Pelicula.create({
