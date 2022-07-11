@@ -10,10 +10,11 @@ const userController = require('../controllers/userController')
 
 //**!     VALIDACIONES   */
 const validationregister = [
-    body('user').notEmpty().withMessage('Debes completar este campo'),
+    body('nombre').notEmpty().withMessage('Debes completar este campo'),
+    body('apellido').notEmpty().withMessage('Debes completar este campo'),
     body('email').isEmail().withMessage('Debes completar este campo'),
-    body('password').notEmpty().withMessage('Debes completar este campo'),
-    body('groups-images').notEmpty().withMessage('Debes completar este campo')
+    body('contraseña').notEmpty().withMessage('Debes completar este campo'),
+    body('imagenUsuario').notEmpty().withMessage('Debes completar este campo')
 ];
 
 //**!     MULTER        */

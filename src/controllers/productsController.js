@@ -2,12 +2,11 @@ const fs = require('fs');
 const path = require('path');
 const db = require('../database/models');
 const sequelize = db.sequelize;
-const { Op } = require("sequelize");
 
 
 const Peliculas = db.Pelicula;
 const Categorias = db.Categoria;
-const Genero = db.Genero;
+const Generos = db.Genero;
 const Usuarios = db.Usuario;
 
 const productsController = {    
@@ -26,7 +25,7 @@ const productsController = {
 
     /* CRUD */
     add: function (req, res) {
-        db.Genero.findAll()
+        db.Generos.findAll()
         .then(generos=>{
             res.render('add.ejs', {allGeneros:generos})
         })
@@ -48,7 +47,7 @@ const productsController = {
     },
     edit: function(req, res) {
         db.Pelicula.findByPk(req.params.id,{
-            include:[Genero]
+            include:[Generos]
         })
         .then(peliculas=>{
             db.Genero.findAll()

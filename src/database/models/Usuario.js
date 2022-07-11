@@ -1,4 +1,3 @@
-const { stringify } = require("nodemon/lib/utils");
 
 module.exports = (sequelize,dataTypes)=>{
     let alias = "Usuario";
@@ -32,7 +31,7 @@ module.exports = (sequelize,dataTypes)=>{
         idCategoria: dataTypes.BIGINT(10), 
     };
     let config = {
-        tableName: "peliculas",
+        tableName: "usuarios",
         timestamps: false
     }
     const Usuario = sequelize.define(alias, cols, config);

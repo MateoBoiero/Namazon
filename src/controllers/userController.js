@@ -7,7 +7,7 @@ const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 
-const Genero = db.Genero;
+const Generos = db.Genero;
 const Usuarios = db.Usuario;
 
 const userController= {
@@ -20,9 +20,11 @@ const userController= {
     /* req.body viene del file en el router */
     processRegister:(req,res)=>{
         let errors = validationResult(req);
-        db.Usuario.create =({
+        if(errors.isEmpty()){
+  
+        db.Usuarios.create =({
     
-            id: users[users.length-1].id+1,
+            id: usuarios[usuarios.length-1].id+1,
             nombre: req.body.nombre,
             apellido: req.body.nombre,
             constraseña: bcrypt.hashSync(req.body.constraseña, 10),
@@ -33,6 +35,7 @@ const userController= {
             res.redirect('/')
         })
         fs.writeFileSync(datapath, JSON.stringify(users, null, " "))
+    }
     },
     forgot: (req,res)=>{
         return res.render('forgot')
