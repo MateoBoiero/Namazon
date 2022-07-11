@@ -21,7 +21,7 @@ const userController= {
     processRegister:(req,res)=>{
         let errors = validationResult(req);
         if(errors.isEmpty()){
-  
+            
         db.Usuarios.create =({
     
             id: usuarios[usuarios.length-1].id+1,
