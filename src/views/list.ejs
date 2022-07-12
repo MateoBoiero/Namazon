@@ -1,35 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%-include('./partials/head', {titulo:"Listado", css:"list"}) %>  <!--*! falta agregar css -->
-<%-include('./partials/header') %> 
+<%-include('./partials/head', {titulo:"Listado", css:"list"}) %>
+    <!--*! falta agregar css -->
+    <%-include('./partials/header') %>
 
-<body>
-    <h1>LISTADO DE PELÍCULAS</h1>
-    <br>
-    <p>
-        <a class="botonAgregar" href="/peliculas/add">Agregar una Pelicula</a>
-        <a class="botonVolver" href="/">inicio</a>
+        <body>
+            <h1>Listado de peliculas</h1>
+            <br>
+            <div class="botones">
+            <a class="botonAgregar" href="/peliculas/add"><button type="submit">Agregar</button></a>
+            <a class="botonVolver" href="/"><button type="submit">inicio</button></a>
+            </div>
+            <br>
+            <ul>
+                <% for( let i=0; i < pelicula.length; i++ ) { %>
+                    <div class="conteinerGeneral">
+                        <div class="conteinerImagen">
+                        <li>
+                            <p class="imagenPelicula">
+                                <%=pelicula[i].imagen %>
+                            </p>
+                        </li>
+                    </div>
+                    <div class="conteinerInfo">
+                        <li>
+                            <a class="nombrePelicula" href="/peliculas/detail/<%= pelicula[i].id %>">
+                                <%= pelicula[i].nombre %>
+                            </a>
+                        </li>
+                        <li>
+                            <p class="descripcionPelicula">
+                                <%=pelicula[i].descripcion %>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="precioPelicula">$<%=pelicula[i].precio %>
+                            </p>
+                        </li>
+                        <br>
+                    </div>
+                    </div>
+                    <% } %>
 
-    </p>
-    <br>
-    <ul>
-        <% for( let i = 0; i < pelicula.length; i++ ) { %>
-        <li>
-            <a class="nombrePelicula" href="/peliculas/detail/<%= pelicula[i].id %>"><%= pelicula[i].nombre %></a>
-        </li>
-        <li>
-            <p class="imagenPelicula"><%=pelicula[i].imagen %></p>
-        </li>
-        <li>
-            <p class="descripcionPelicula"><%=pelicula[i].descripcion %></p>
-        </li>
-        <li>
-            <p class="precioPelicula">$<%=pelicula[i].precio %></p>
-        </li>
-        <% } %>
-
-    </ul>
-</body>
+            </ul>
+        </body>
+        <%-include('./partials/footer') %>
 
 </html>

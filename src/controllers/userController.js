@@ -26,7 +26,7 @@ const userController= {
     
             id: usuarios[usuarios.length-1].id+1,
             nombre: req.body.nombre,
-            apellido: req.body.nombre,
+            apellido: req.body.apellido,
             constraseña: bcrypt.hashSync(req.body.constraseña, 10),
             email:req.body.email,
             imagenUsuario: req.file ? req.file.filename : "default.png"
