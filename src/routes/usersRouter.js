@@ -20,10 +20,10 @@ const validationregister = [
 //**!     MULTER        */
 const storage = multer.diskStorage({
     destination:(req, file, cb) =>{
-        cb(null, "public/images/groups");
+        cb(null, "public/images/users");
     },
     filename:(req, file, cb)=>{
-        const newFilename = 'groups-' + Date.now() + path.extname(file.originalname);
+        const newFilename = 'user-' + Date.now() + path.extname(file.originalname);
         cb(null, newFilename)
     }
 });
@@ -31,11 +31,16 @@ const storage = multer.diskStorage({
 const upload = multer({storage:storage});
 
 //**!      CONTROLLERS    */
+
+/* ---- LOGIN ---- */
 router.get('/login',userController.login);
+/* router.post('/login',userController.processLogin); */
 
+/* ---- REGISTER ---- */
 router.get('/register',userController.register);
-router.post('/register', upload.single('groups-images'), validationregister ,userController.processRegister);
+router.post('/register', upload.single('imagenUsuario'), /* validationregister , */userController.processRegister);
 
+/* ---- FORGOT ---- */
 router.get('/forgot',userController.forgot);
 
 module.exports = router;
