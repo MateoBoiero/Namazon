@@ -38,16 +38,13 @@ input{
     margin-bottom: 15px;
 }
 
-.fa-solid{
+.fas{
     min-width: 50px;
     text-align: center;
-    color:#999
+    color:#999;
+    font-size: 1em;
 }
-.fa-envelope{
-    min-width: 50px;
-    text-align: center;
-    color:#999
-}
+
 button{
     color: #e7ecef;
     display:block;
@@ -74,8 +71,8 @@ a{
     color: #001524;
     border-bottom: #001524 1px solid;
 }
-a:hover{
-    color: #999;
+button:hover{
+    background-color: #043d63;
 }
 /*Media*/
 @media (max-width: 700px) {
@@ -110,11 +107,11 @@ a:hover{
     input{
         font-size: 0.8em;
     }
-    .fa-solid{
-        font-size: 0.8em;
-    }
-    .fa-envelope{
-        font-size: 0.8em;
+    .fas{
+        min-width: 50px;
+        text-align: center;
+        color:#999;
+        font-size: 1em;
     }
     button{
         font-size: 1em;

@@ -32,6 +32,7 @@ const upload = multer({storage:storage});
 
 //**!      CONTROLLERS    */
 router.get('/login',userController.login);
+router.post('/login',userController.login);
 
 router.get('/register',userController.register);
 router.post('/register', upload.single('groups-images'), validationregister ,userController.processRegister);

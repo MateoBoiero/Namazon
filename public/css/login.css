@@ -1,99 +1,157 @@
 body{
     font-family: 'Roboto';
+    margin: 0;
     background: linear-gradient(to bottom,#001524 , #002a47);
     background-size:cover;
     background-attachment: fixed;
 }
-
-img{
-    display: block;
-    width: 17em;
-    height: 4em;
-    margin: 1em auto;
-    padding: 1em;
-    background-color: #e7ecef;
-    border-radius:0 30px
+*{
+    box-sizing: border-box;
 }
-h1{
-    font-size: 2em;
-    text-align: center;
-    color: #001524;
-    margin-top: 0;
-}
-label{
-    font-size: 1.3em;
-    color: #001524;
-    margin: 1em 0;
+.formulario{
+    background-color:#e7ecef;
+    width: 60vw;
+    margin: 4em auto;
+    padding: 3px;
+    border-radius: 1em;
 }
 .contenedor{
-    background-color: #e7ecef;
-    width: 30vw;
-    height: 22em;
-    border-radius: 1em;
-    margin: 2em auto;
-    padding: 2em 5em;
-}
-.buscador{
-    background: transparent;
-    border: none;
-    height: 2em;
     width: 100%;
-    margin-bottom: 1em;
-    border-bottom: 1px solid #001524;
+    padding: 15px;
 }
-.remember{
-    display: flex;
-    margin-top: 10px;
-}
-.remember label{
-    margin: 0px;
+h1{
+    text-align: center;
     color: #001524;
-    font-size: 1em;
+    font-size: 40px;
+}
+input{
+    font-size: 20px;
+    width: 70%;
+    padding: 10px;
+    border: none;
+    margin-bottom: 1em;
+    background: transparent;
+    border-bottom: 1px solid #999;
+}
+.input-contenedor{
+    text-align: center;
 }
 
-.enviar{
+.fas{
+    min-width: 50px;
+    text-align: center;
+    color:#999;
+    font-size: 1em;
+}
+button{
     color: #e7ecef;
     display:block;
     border: none;
-    border-radius: 6px;
+    border-radius: 5px;
     background-color: #001524;
-    width: 7.5em;
-    margin: 1em auto 1em;
+    width: 5.5em;
+    height: 1.5em;
+    margin: 1px auto;
     font-size: 1.5em;
     cursor: pointer;
 }
-p{ color: #001524;
+.confirmacion{
+   width: 20vw;
+   font-size: 1.2em;
+}
+p{
     text-align: center;
-    margin: 10px;
-    font-size: 0.9em;
+    font-size: 1em;
+    margin: 1em;
 }
 a{
     text-decoration: none;
     color: #001524;
-
+    border-bottom: #001524 1px solid;
 }
-a:hover{
-    color:#e7ecef;
-    background-color: #001524;
-    padding: 5px;
-    border-radius: 6px;
+button:hover{
+    background-color: #043d63;
 }
 
-/*Media */
-@media (max-width: 850px){
+#checkbox{
+    width: 3%;
+}
+
+/*Media*/
+@media (max-width: 700px) {
+    h1 {
+        margin: 0.4em;
+      font-size: 2em
+    }
+    input{
+        margin-bottom: 0.5em;
+        font-size: 1.1em;
+    }
+    button{
+        margin: 1px auto;
+        font-size: 1.2em;
+    }
+    .confirmacion{
+        margin: 0px auto 5px;
+        font-size: 1.2em;
+    }
+    p{
+        font-size: 0.7em;
+    }
+}
+
+@media (max-width: 500px) {
+    .formulario{
+        width: 80vw;
+    }
+    h1{
+        font-size: 1.5em;
+    }
+    input{
+        font-size: 0.8em;
+    }
+    .fa-solid{
+        font-size: 0.8em;
+    }
+    .fa-envelope{
+        font-size: 0.8em;
+    }
+    button{
+        font-size: 1em;
+    }
+    .confirmacion{
+        font-size: 1em;
+    }
+    p{
+        font-size: 0.6em;
+    }
+
+}
+@media (max-width: 358px){
+    .formulario{
+        width: 76vw;
+    }
     .contenedor{
-        width: 50vw;
+        padding: 0;
     }
-}
-
-@media (max-width: 650px) {
-    p {
-      font-size: 12px;
+    input{
+        padding: 5px;
     }
-}
-
-@media (max-width: 330px) {
-    .enviar{
-        margin: 1em auto 1px
+    .fa-solid{
+        display: none;
+    }
+    .fa-envelope{
+        display: none;
+    }
+    button{
+        margin-top: 1px;
+    }
+    .confirmacion{
+        margin-top: 1px;
+        font-size: 0.8em;
+        width: 20vw;
+    }
+    .input-contenedor{
+        margin-bottom: 5px;
     }
 }
