@@ -56,7 +56,7 @@ footer{
 }
 
 .conteinerGeneral{
-    
+    display: flex;
     flex-wrap: wrap;
     margin: 1rem;
     /* background-color: #d0d2d3;8d99ae*/
@@ -68,17 +68,25 @@ footer{
 }
 
 .conteinerImagen{
-    width: 40%;
+    width: 20%;
 }
 
+
 .conteinerInfo{
-    width:60%
+    width:80%
 }
 
 .imagenPelicula{
     width: 90%;
+    border-radius: 1rem;
 }
 
+.nombrePelicula{
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
 
 li{
     list-style: none;
