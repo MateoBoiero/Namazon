@@ -25,7 +25,7 @@ const productsController = {
 
     /* CRUD */
     add: function (req, res) {
-        db.Generos.findAll()
+        db.Genero.findAll()
         .then(generos=>{
             res.render('add.ejs', {allGeneros:generos})
         })
@@ -33,16 +33,15 @@ const productsController = {
     },
     create: function (req, res) {
         db.Pelicula.create({
-            id:req.body.id,
-            nombre:req.body.nombre,
+            nombre:req.body.title,
             rating:req.body.rating,
-            precio:req.body.precio,
-            descripcion:req.descripcion,
-            imagen:req.body.imagen,
+            precio:10/* req.body.precio */,
+            descripcion:50/* req.descripcion */,
+            imagen:'default.png'/* req.body.imagen */,
             idGenero:req.body.idGenero
         })
         .then(peliculas=>{
-            res.redirect('/index') /* NO ESTOY SEGURO DE ESTO */
+            res.redirect('/') /* NO ESTOY SEGURO DE ESTO */
         })
     },
     edit: function(req, res) {

@@ -12,8 +12,8 @@ const productsController = require("../controllers/productsController");
 
 /* carrito de compras */
 router.get('/peliculas/detail/:id', productsController.detail);
-router.get('/peliculas/add', productsController.add);
-router.post('/peliculas/create', productsController.create);
+router.get('/add', productsController.add);
+router.post('/create', productsController.create);
 
 router.get('/peliculas/edit/:id', productsController.edit);
 router.post('/peliculas/update/:id', productsController.update);

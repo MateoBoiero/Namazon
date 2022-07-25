@@ -6,14 +6,12 @@ let bcrypt = require('bcrypt');
 const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
-
-const Generos = db.Genero;
-const Usuarios = db.Usuario;
-
 const userController= {
     login: (req,res)=>{
         return res.render('login')
     },
+
+/* PROCESSLOGIN */
     register: (req,res)=>{
         return res.render('register')
     },
@@ -22,20 +20,17 @@ const userController= {
         let errors = validationResult(req);
         if(errors.isEmpty()){
             
-        db.Usuarios.create =({
-    
-            id: usuarios[usuarios.length-1].id+1,
-            nombre: req.body.nombre,
-            apellido: req.body.apellido,
-            constraseña: bcrypt.hashSync(req.body.constraseña, 10),
-            email:req.body.email,
-            imagenUsuario: req.file ? req.file.filename : "default.png"
-        
-        }).then(usuario=>{
-            res.redirect('/')
-        })
-        fs.writeFileSync(datapath, JSON.stringify(users, null, " "))
-    }
+            db.Usuario.create({
+                nombre: req.body.nombre,
+                apellido: req.body.apellido,
+                contraseña: bcrypt.hashSync(req.body.contraseña, 10),
+                email:req.body.email,
+                imagenUsuario: req.file ? req.file.filename : "default.png",
+                idCategoria: 2
+            }).then(usuario=>{
+                res.redirect('/')
+            })
+        }/* else mostrar los errores*/
     },
     forgot: (req,res)=>{
         return res.render('forgot')

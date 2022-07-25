@@ -16,7 +16,7 @@ module.exports = (sequelize,dataTypes)=>{
             type: dataTypes.STRING(255),
             allowNull: false
         },
-        constraseña: {
+        contraseña: {
             type: dataTypes.STRING(255),
             allowNull: false
         },
