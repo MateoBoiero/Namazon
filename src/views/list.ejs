@@ -9,8 +9,7 @@
             <h1>Listado de peliculas</h1>
             <br>
             <div class="botones">
-            <a class="botonAgregar" href="/peliculas/add"><button type="submit">Agregar</button></a>
-            <a class="botonVolver" href="/"><button type="submit">inicio</button></a>
+            <a class="botonAgregar" href="/products/add"><button type="submit">Agregar</button></a>
             </div>
             <br>
             <ul>
@@ -19,14 +18,12 @@
                         <div class="conteinerImagen">
                         <li>
                             <img class="imagenPelicula"
-                            src="/images/products/<%=pelicula[i].imagen %>"
-                            />
-                        
+                            src="/images/products/<%=pelicula[i].imagen %>"/>
                         </li>
                     </div>
                     <div class="conteinerInfo">
                         <li>
-                            <a class="nombrePelicula" href="/peliculas/detail/<%= pelicula[i].id %>">
+                            <a class="nombrePelicula" href="/products/detail/<%= pelicula[i].id %>">
                                 <%= pelicula[i].nombre %>
                             </a>
                         </li>

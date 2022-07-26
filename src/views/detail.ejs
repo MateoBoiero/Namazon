@@ -5,17 +5,17 @@
 <%-include('./partials/header') %>
 
 <body>
-    <h1><%= Pelicula.nombre %> </h1>    
+    <h1><%= peliculas.nombre %> </h1>    
     <br>
-    <p>RATING: <%= Pelicula.rating %> </p>
-    <p>DESCRIPCION: <%= Pelicula.descripcion %> </p>
-    <p>PRECIO: <%= Pelicula.precio %> </p>
-    <p>IMAGEN: <%= Pelicula.imagen %> </p>
+    <p>RATING: <%= peliculas.rating %> </p>
+    <p>DESCRIPCION: <%= peliculas.descripcion %> </p>
+    <p>PRECIO: <%= peliculas.precio %> </p>
+    <p>IMAGEN: <%= peliculas.imagen %> </p>
     <br>
     <section>
-        <a href="/peliculas/delete/<%=Pelicula.id%> ">Borrar</a>
-        <a href="/peliculas/edit/<%=Pelicula.id%> ">Editar</a>
-        <!--Aquí debe colocar los botones de Modificar - Borrar y Listado de Películas-->
+        <a href="/products/delete/<%=peliculas.id%> ">Borrar</a>
+        <a href="/products/edit/<%=peliculas.id%> ">Editar</a>
+
     </section>
 
 </body>

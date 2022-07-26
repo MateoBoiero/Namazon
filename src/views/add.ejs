@@ -17,16 +17,19 @@
             <label for="genreID">Genero </label>
             <p>
                 <select name="genre_id" id="" required>
-                    <option value="" disabled selected>- select genre - </option>
+                    <option value="" disabled selected>- Genero - </option>
                     <% allGeneros.forEach(genero => { %>
                     <option value="<%= genero.id %>"><%= genero.genero %></option>
                     <% }); %>
                 </select>
             </p>
+            <input type="file" name="imagenUsuario" id="image">
+
             <br>
             <p> <button class="botonAgregar" type="submit">Agregar</button>
             
-            <a  class="botonVolver" href="/peliculas">Listado de Películas</a></p>
+            <a class="botonVolver" href="/">Listado de Películas</a></p>
+            
         </form>
     </section>
     

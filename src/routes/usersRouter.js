@@ -34,11 +34,7 @@ const upload = multer({storage:storage});
 
 /* ---- LOGIN ---- */
 router.get('/login',userController.login);
-<<<<<<< HEAD
-router.post('/login',userController.login);
-=======
 /* router.post('/login',userController.processLogin); */
->>>>>>> a4de65a2e64b138fcd7a99c952706bbd931cbd15
 
 /* ---- REGISTER ---- */
 router.get('/register',userController.register);
