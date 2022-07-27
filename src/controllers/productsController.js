@@ -35,9 +35,9 @@ const productsController = {
         db.Pelicula.create({
             nombre:req.body.title,
             rating:req.body.rating,
-            precio:10/* req.body.precio */,
-            descripcion:50/* req.descripcion */,
-            imagen:'default.png'/* req.body.imagen */,
+            precio:req.body.precio ,
+            descripcion:req.descripcion,
+            imagen:req.body.imagen,
             idGenero:req.body.idGenero
         })
         .then(peliculas=>{
