@@ -8,8 +8,8 @@ header {
 
 body {
     /* background-color: #001524; */
-    background-color: #003049;
-    
+    /* background-color: #003049; */
+    background-color: #003049
 }
 
 .fotoUsuario {
@@ -59,8 +59,11 @@ footer{
     display: flex;
     flex-wrap: wrap;
     margin: 1rem;
-    /* background-color: #d0d2d3;8d99ae*/
-    background-color: #9db4c0;
+    /* background-color: #d0d2d3;8d99ae;7EA8BE;8ea4d2;ced4da*/
+    /* background-color: #9db4c0; */
+    background-color: transparent;
+    border: 2px solid #e7ecef;
+    color: #e7ecef;
     border-radius: 2rem;
     width: 90%;
     padding: 1rem;
@@ -84,7 +87,7 @@ footer{
 .nombrePelicula{
     font-size: 2.5rem;
     text-decoration: none;
-    color: black;
+    color: #e7ecef;
     font-weight: bold;
 }
 
@@ -92,20 +95,44 @@ li{
     list-style: none;
 }
 
-.botones{
-    display: flex;
-}
-
 button{
-    color: #001524;
+    /* color: #001524;
     border: none;
     border-radius: 5px;
     background-color: #e7ecef;
     width: 5.5em;
     height: 1.5em;
     margin: 1rem;
-    font-size: 1.5em;
+    font-size: 1.5em; */
+    background: transparent;
+    color: #e7ecef;
+    font-weight: 400;
+    font-size: 24px;
+    text-transform: uppercase;
+    padding: 16px 36px;
+    border: 2px solid #e7ecef;
+    border-radius: 32px;
+    transform: translate(0);
+    overflow: hidden;
+    cursor: pointer;
 }
+button::before{
+    content: "";
+    position: absolute;
+    background: #e7ecef;
+    width: 8px;
+    top: 0;
+    bottom: 0;
+    left: -32px;
+    transform: rotate(-16deg);
+    filter: blur(6px);
+} 
+button:hover::before{
+    left: calc(100% + 32px);
+    transition: 0.75s;
+}
+
+
 
 h1{
     color: #e7ecef;
