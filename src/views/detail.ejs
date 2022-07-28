@@ -5,16 +5,22 @@
 <%-include('./partials/header') %>
 
 <body>
-    <h1><%= peliculas.nombre %> </h1>    
-    <br>
-    <p>RATING: <%= peliculas.rating %> </p>
-    <p>DESCRIPCION: <%= peliculas.descripcion %> </p>
-    <p>PRECIO:$ <%= peliculas.precio %> </p>
-    <img src="/images/products/<%=peliculas.imagen %>" />
-    <br>
-    <section>
-        <a href="/products/delete/<%=peliculas.id%> ">Borrar</a>
-        <a href="/products/edit/<%=peliculas.id%> ">Editar</a>
+    <div class="conteinerGeneral">
+        <div class="conteinerImagen">
+            <img src="/images/products/<%=peliculas.imagen %>" />
+        </div>
+        <div class="conteinerInfo"> 
+            <h1><%= peliculas.nombre %> </h1>    
+            <p>RATING: <%= peliculas.rating %> </p>
+            <p>DESCRIPCION: <%= peliculas.descripcion %> </p>
+            <p>PRECIO:$ <%= peliculas.precio %> </p>
+        </div>    
+    </div>
+        <section>
+        <div class="botones">
+            <a href="/products/delete/<%=peliculas.id%> ">Borrar</a>
+            <a href="/products/edit/<%=peliculas.id%> ">Editar</a>
+        </div>
 
     </section>
 
