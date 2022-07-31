@@ -15,9 +15,6 @@ header {
 
 
 .carrito {
-    /*  position: absolute;
-    top: 3vw;
-    right: 15vw; */
     font-size: 30px;
     color: #e7ecef;
     text-decoration: none;
@@ -29,9 +26,6 @@ header {
 }
 
 .bars {
-    /*  position: absolute;
-    top: 3vw;
-    right: 5vw; */
     font-size: 30px;
     color: #e7ecef;
     width: 5%;
@@ -66,58 +60,13 @@ footer{
 }
 
 body {
-    /* background-color: #001524; */
     background-color: #003049;
-    /* background-image: url("/images/fondo3.jpg");
-    background-attachment: fixed; */
-}
-.conteinerGeneral{
-    display: flex;
-    flex-wrap: wrap;
-    margin: 1rem;
-    background-color: transparent;
-    border: 2px solid #e7ecef;
-    color: #e7ecef;
-    border-radius: 2rem;
-    width: 90%;
-    padding: 1rem;
-    box-sizing: border-box;
+
 }
 
-.conteinerImagen{
-    width: 20%;
-}
-
-
-.conteinerInfo{
-    width:80%
-}
-
-.imagenPelicula{
-    width: 90%;
-    border-radius: 1rem;
-}
-
-.nombrePelicula{
-    font-size: 2.5rem;
-    text-decoration: none;
-    color: #e7ecef;
-    font-weight: bold;
-}
-
-li{
-    list-style: none;
-}
+/* --------- */
 
 button{
-    /* color: #001524;
-    border: none;
-    border-radius: 5px;
-    background-color: #e7ecef;
-    width: 5.5em;
-    height: 1.5em;
-    margin: 1rem;
-    font-size: 1.5em; */
     background: transparent;
     color: #e7ecef;
     font-weight: 400;
@@ -146,9 +95,40 @@ button:hover::before{
     transition: 0.75s;
 }
 
-
-
-h1{
+.conteinerGeneral{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem;
+    background-color: transparent;
+    border: 2px solid #e7ecef;
     color: #e7ecef;
-    text-align: center;
+    border-radius: 2rem;
+    width: 90%;
+    padding: 1rem;
+}
+
+.conteinerImagen{
+    width: 20%;
+}
+
+
+.conteinerInfo{
+    width:80%
+}
+
+.imagenPelicula{
+    width: 90%;
+    border-radius: 1rem;
+}
+
+.nombrePelicula{
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: #e7ecef;
+    font-weight: bold;
+}
+
+.botones{
+    text-align: end;
+    padding-right:2em ;
 }

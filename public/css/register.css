@@ -1,12 +1,54 @@
-body{
+html{
     font-family: 'Roboto';
-    margin: 0;
-    background: linear-gradient(to bottom,#001524 , #002a47);
-    background-size:cover;
-    background-attachment: fixed;
 }
-*{
-    box-sizing: border-box;
+header {
+    background-color: #003049;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.logo{
+    width: 10%;
+    margin-bottom: 0.01em;
+    padding-left: 2em;
+}
+
+.bars {
+    font-size: 30px;
+    color: #e7ecef;
+    width: 5%;
+    padding: 1em;
+}
+
+fa-bars{
+    color: #e7ecef;
+}
+
+.vacio{
+    width: 75%;
+
+}
+
+footer{
+    background-color: #003049;
+    margin: 1rem;
+    padding: 1rem;
+}
+.eslogan{
+    font-size: 1rem;
+    color: #e7ecef;
+    margin: 6px;
+    text-align: center;
+}
+.copyright{
+    font-size: 0.75rem;
+    color: #e7ecef;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+body {
+    background-color: #003049;
 }
 .formulario{
     background-color:#e7ecef;
