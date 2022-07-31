@@ -7,5 +7,6 @@ const path = require('path');
 const mainController = require("../controllers/mainController.js");
 //**!      CONTROLLERS       */
 router.get('/', mainController.index);
+router.get('/list', mainController.list)
 
 module.exports = router;

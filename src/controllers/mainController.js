@@ -9,6 +9,9 @@ const Pelicula = db.Pelicula
 
 const mainController = {
     index: (req, res)=>{
+        res.render('index');
+    },
+    list: (req, res)=>{
         db.Pelicula.findAll()
         .then(pelicula=>{
             res.render('list.ejs',{pelicula:pelicula})
@@ -17,9 +20,6 @@ const mainController = {
             res.send(error)
         })
     }
-    /* index: (req, res)=>{
-        res.render('list');
-    } */
 };
 
 module.exports = mainController;
