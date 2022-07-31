@@ -2,43 +2,52 @@ html{
     font-family: 'Roboto';
 }
 header {
-    background-color: #001524;
+    background-color: #003049;
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.logo{
+    width: 10%;
+    margin-bottom: 0.01em;
 }
 
-body {
-    /* background-color: #001524; */
-    /* background-color: #003049; */
-    background-color: #003049
-}
-
-.fotoUsuario {
-    font-size: 20px;
-    color: #e7ecef;
-}
 
 .carrito {
-    position: absolute;
+    /*  position: absolute;
     top: 3vw;
-    right: 15vw;
-    font-size: 25px;
+    right: 15vw; */
+    font-size: 30px;
     color: #e7ecef;
     text-decoration: none;
+    width: 5%;
+    padding: 1em;
 }
 .fa-shopping-cart{
     color: #e7ecef;
 }
 
 .bars {
-    position: absolute;
+    /*  position: absolute;
     top: 3vw;
-    right: 5vw;
-    font-size: 25px;
+    right: 5vw; */
+    font-size: 30px;
     color: #e7ecef;
+    width: 5%;
+    padding: 1em;
+}
+.vacio{
+    width: 60%;
+
 }
 
+.perfilUsuario {
+    font-size: 20px;
+    color: #e7ecef;
+    width: 5%;
+}
 footer{
-    background-color: #001524;
+    background-color: #003049;
     margin: 1rem;
     padding: 1rem;
 }
@@ -55,6 +64,12 @@ footer{
     text-align: center;
 }
 
+body {
+    /* background-color: #001524; */
+    background-color: #003049;
+    /* background-image: url("/images/fondo3.jpg");
+    background-attachment: fixed; */
+}
 .conteinerGeneral{
     display: flex;
     flex-wrap: wrap;
