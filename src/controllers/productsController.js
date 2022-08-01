@@ -37,11 +37,11 @@ const productsController = {
             rating:req.body.rating,
             precio:req.body.precio ,
             descripcion:req.descripcion,
-            imagen:req.body.imagen,
+            imagen:'niamazonBlanco.png',
             idGenero:req.body.idGenero
         })
         .then(peliculas=>{
-            res.redirect('/') /* NO ESTOY SEGURO DE ESTO */
+            res.redirect('/') 
         })
     },
     edit: function(req, res) {
@@ -76,7 +76,7 @@ const productsController = {
     delete: function (req, res) {
         db.Pelicula.findByPk(req.params.id)
         .then(peliculas=>{
-            res.render('/movieDeletes',{peliculas})
+            res.render('delete',{peliculas})
         })
     },
     destroy: function (req, res) {
@@ -85,7 +85,7 @@ const productsController = {
             {id:req.params.id}
         })
         .then(()=>{
-            res.render('/index')
+            res.render('index')
         })
     }
 }
