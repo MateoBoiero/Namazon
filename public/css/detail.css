@@ -60,8 +60,9 @@ footer{
 }
 
 body {
-    background-color: #003049;
-
+    /* background-color: #003049; */
+    background-image: url("/images/fondo4.jpg");
+    background-attachment: fixed;
 }
 
 /* --------- */

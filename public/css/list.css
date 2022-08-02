@@ -67,9 +67,9 @@ footer{
 
 body {
     /* background-color: #001524; */
-    background-color: #003049;
-    /* background-image: url("/images/fondo3.jpg");
-    background-attachment: fixed; */
+    /* background-color: #003049; */
+    background-image: url("/images/fondo4.jpg");
+    background-attachment: fixed;
 }
 .conteinerGeneral{
     display: flex;

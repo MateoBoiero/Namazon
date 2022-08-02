@@ -1,15 +1,15 @@
-
 <!DOCTYPE html>
 <html lang="en">
-        
-<%-include('./partials/head',{titulo:"Login", css:"login"}) %>  
-<header>
-    <img class="logo" src="/images/niamazonBlanco.png" alt="logo">
-    <div class="vacio"></div>
-    <div class="bars"><i class="fas burguerBar fa-bars"></i></div>
-</header>
-<body>
- <!--    <% if(typeof errors != 'undefined') { %> 
+
+<%-include('./partials/head',{titulo:"Login", css:"login"}) %>
+    <header>
+        <img class="logo" src="/images/niamazonBlanco.png" alt="logo">
+        <div class="vacio"></div>
+        <div class="bars"><i class="fas burguerBar fa-bars"></i></div>
+    </header>
+
+    <body>
+        <!--    <% if(typeof errors != 'undefined') { %> 
         <p class="errors">Error</p>
         <ul>
             <% for (let i = 0; i < errors.length; i++) { %>
@@ -19,31 +19,32 @@
             <% } %> 
         </ul>
         <% } %>  -->
-    <form class="formulario" action="/users/login" method="post">
-        <h1>Login</h1>
-        <div class="contenedor">
-            <div class="input-contenedor">
-                <i class="fas fa-user"></i>
-                <input type="text" name="nombre" id="nombre" placeholder="nombre">
-                <br>
+        <form class="formulario" action="/users/login" method="post">
+            <h1>Login</h1>
+            <div class="contenedor">
+                <div class="input-contenedor">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="nombre" id="nombre" placeholder="nombre">
+                    <br>
 
-                <i class="fas fa-at"></i>
-                <input type="email" name="email" id="email" placeholder="Email">
-                <br>
+                    <i class="fas fa-at"></i>
+                    <input type="email" name="email" id="email" placeholder="Email">
+                    <br>
 
-                <i class="fas fa-lock"></i>
-                <input type="password" name="contraseña" id="contraseña" placeholder="Contraseña">
-                <br>
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="contraseña" id="contraseña" placeholder="Contraseña">
+                    <br>
 
-                <label class="checkbox-label"><input type="checkbox" id="checkbox">Recordar</label><br>
+                    <label class="checkbox-label"><input type="checkbox" id="checkbox">Recordar</label><br>
+                </div>
+
+
+                <button type="submit">Login</button>
+                <p>¿No Tienes Cuenta?<a href="/users/register">Registrate</a></p>
             </div>
+        </form>
+        <%-include('./partials/footer') %>
 
-            
-            <button type="submit">Login</button>
-            <p>¿No Tienes Cuenta?<a href="/users/register">Registrate</a></p>
-        </div>
-    </form>
-    <%-include('./partials/footer') %> 
-    
-</body>
+    </body>
+
 </html>
