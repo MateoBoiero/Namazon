@@ -71,52 +71,54 @@ body {
     /* background-image: url("/images/fondo3.jpg");
     background-attachment: fixed; */
 }
-.conteinerGeneral{
-    display: flex;
-    flex-wrap: wrap;
-    margin: 1rem;
-    background-color: transparent;
-    border: 2px solid #e7ecef;
-    color: #e7ecef;
-    border-radius: 2rem;
-    width: 90%;
-    padding: 1rem;
-    box-sizing: border-box;
+/* ------- */
+
+.formulario{
+    background-color:#e7ecef;
+    width: 60vw;
+    margin:auto;
+    padding: 3px;
+    border-radius: 1em;
 }
-
-.conteinerImagen{
-    width: 20%;
+.conteiner{
+    width: 100%;
+    padding: 2.5em;
 }
-
-
-.conteinerInfo{
-    width:80%
+h1{
+    text-align: center;
+    color: #001524;
+    font-size: 40px;
 }
-
-.imagenPelicula{
-    width: 90%;
-    border-radius: 1rem;
+input{
+    font-size: 20px;
+    width: 70%;
+    padding: 10px;
+    border: none;
+    margin-bottom: 1em;
+    background: transparent;
+    border-bottom: 1px solid #999;
 }
-
-.nombrePelicula{
-    font-size: 2.5rem;
-    text-decoration: none;
-    color: #e7ecef;
-    font-weight: bold;
+.inputConteiner{
+    text-align: center;
 }
-
-li{
-    list-style: none;
+.inputGenero{
+    font-size: 20px;
+    width: 70%;
+    padding: 10px;
+    border: none;
+    background: transparent;
 }
-
+.botones{
+    background-color:#e7ecef ;
+}
 button{
     background: transparent;
-    color: #e7ecef;
+    color: #003049;
     font-weight: 400;
     font-size: 24px;
     text-transform: uppercase;
     padding: 16px 36px;
-    border: 2px solid #e7ecef;
+    border: 2px solid #003049;
     border-radius: 32px;
     transform: translate(0);
     overflow: hidden;
@@ -136,11 +138,4 @@ button::before{
 button:hover::before{
     left: calc(100% + 32px);
     transition: 0.75s;
-}
-
-
-
-h1{
-    color: #e7ecef;
-    text-align: center;
 }

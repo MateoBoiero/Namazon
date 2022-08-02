@@ -1,42 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%-include('./partials/head', {titulo:"Listado", css:""}) %>  <!--*! falta agregar css -->
-<%-include('./partials/header') %>
+<%-include('./partials/head', {titulo:"Listado", css:"add"}) %>
+    <%-include('./partials/header') %>
 
-<body>
-   
-    <h1 class="titulo">Agregar Película</h1>
-    <br>
-    <section class="formulario">
-        <form action="/products/create" method="POST">
-            <label for="title">Titulo </label>
-            <p><input type="text" name="title" id="" required></p>
-            <label for="descripcion">Descripcion </label>
-            <p><input type="text" name="descripcion" id="" required></p>
-            <label for="rating">Rating </label>
-            <p><input type="number" name="rating" id="" required> </p>
-            <label for="precio">Precio </label>
-            <p><input type="text" name="Precio" id="" required> </p>
-            <label for="genreID">Genero </label>
-            <p>
-                <select name="genre_id" id="" required>
-                    <option value="" disabled selected>- Genero - </option>
-                    <% allGeneros.forEach(genero => { %>
-                    <option value="<%= genero.id %>"><%= genero.genero %></option>
-                    <% }); %>
-                </select>
-            </p>
-           <!--  <input type="file" name="imagenUsuario" id="image"> -->
+        <body>
+            <div class="formulario">
 
-            <br>
-            <p> <button class="botonAgregar" type="submit">Agregar</button>
-            
-            <a class="botonVolver" href="/list">Listado de peliculas</a></p>
-            
-        </form>
-    </section>
-    
-</body>
+                <h1 class="titulo">Agregar Película</h1>
+                <br>
+                <section class="conteiner">
+                    <form action="/products/create" method="POST">
+                        <label for="title">Titulo </label>
+                        <p><input class="inputConteiner" type="text" name="title" id="" required></p>
+                        <label for="descripcion">Descripcion </label>
+                        <p><input class="inputConteiner" type="text" name="descripcion" id="" required></p>
+                        <label for="rating">Rating </label>
+                        <p><input class="inputConteiner" type="number" name="rating" id="" required> </p>
+                        <label for="precio">Precio </label>
+                        <p><input class="inputConteiner" type="text" name="precio" id="" required> </p>
+                        <label for="genreID">Genero </label>
+                        <p class="inputGenero">
+                            <select name="genre_id" id="" required>
+                                <option class="inputGenero" value="" disabled selected>- Genero - </option>
+                                <% allGeneros.forEach(genero=> { %>
+                                    <option value="<%= genero.id %>">
+                                        <%= genero.genero %>
+                                    </option>
+                                    <% }); %>
+                            </select>
+                        </p>
+                        <p>la imagen esta definida por default porque no funciona la logica</p>
+                        <!--  <input type="file" name="imagenUsuario" id="image"> -->
+
+                        <br>
+                </section>
+
+                </form>
+                <div class="botones">
+                    <button class="botonAgregar" type="submit">Agregar</button>
+                    <a href="/list"><button type="submit">Listado de peliculas</button></a>
+                </div>
+            </div>
+
+
+
+        </body>
+        <%-include('./partials/footer') %>
 
 </html>
