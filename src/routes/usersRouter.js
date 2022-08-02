@@ -13,9 +13,14 @@ const validationregister = [
     body('nombre').notEmpty().withMessage('Debes completar este campo'),
     body('apellido').notEmpty().withMessage('Debes completar este campo'),
     body('email').isEmail().withMessage('Debes completar este campo'),
-    body('contraseña').notEmpty().withMessage('Debes completar este campo'),
+    body('contraseña').notEmpty().isLength({min: 8}).withMessage('Debes completar este campo con mas de 8 letras'),
     body('imagenUsuario').notEmpty().withMessage('Debes completar este campo')
 ];
+/* const validationlogin = [
+    body('nombre').notEmpty().withMessage('Debes completar este campo'),
+    body('email').isEmail().withMessage('Debes completar este campo'),
+    body('contraseña').notEmpty().isLength({min: 8}).withMessage('Debes completar este campo con mas de 8 letras'),
+]; */
 
 //**!     MULTER        */
 const storage = multer.diskStorage({
@@ -34,11 +39,11 @@ const upload = multer({storage:storage});
 
 /* ---- LOGIN ---- */
 router.get('/login',userController.login);
-/* router.post('/login',userController.processLogin); */
+/* router.post('/login',validationlogin ,userController.processLogin); */
 
 /* ---- REGISTER ---- */
 router.get('/register',userController.register);
-router.post('/register', upload.single('imagenUsuario'), /* validationregister , */userController.processRegister);
+router.post('/register', upload.single('imagenUsuario'), validationregister ,userController.processRegister);
 
 /* ---- FORGOT ---- */
 router.get('/forgot',userController.forgot);

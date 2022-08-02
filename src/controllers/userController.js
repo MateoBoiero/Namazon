@@ -10,7 +10,6 @@ const userController= {
     login: (req,res)=>{
         return res.render('login')
     },
-
 /* PROCESSLOGIN */
     register: (req,res)=>{
         return res.render('register')
@@ -30,7 +29,10 @@ const userController= {
             }).then(usuario=>{
                 res.redirect('/')
             })
-        }/* else mostrar los errores*/
+        }
+        else{
+            return res.render('register', {errors:errors.errors})
+        }
     },
     forgot: (req,res)=>{
         return res.render('forgot')

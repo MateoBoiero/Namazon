@@ -1,6 +1,7 @@
 //**!      CONFIGURACION    */
 const express = require('express');
 const app = express();
+/* const session = require('express-session') */
 const path = require('path');
 const methodOverride = require('method-override');
 
@@ -9,6 +10,7 @@ app.set('views', path.resolve(__dirname, 'views'));
 
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
+/* app.use(session({secret: 'Secreto!!'})) */
 app.use(express.json());
 app.use(methodOverride('method_'))
 
