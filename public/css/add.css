@@ -111,16 +111,20 @@ input{
     background: transparent;
 }
 .botones{
-    background-color:#e7ecef ;
+    width: 60vw;
+    margin:auto;
+    margin-top: 1em ;
+    padding: 3px;
+    border-radius: 1em;
 }
 button{
     background: transparent;
-    color: #003049;
+    color: #e7ecef;
     font-weight: 400;
     font-size: 24px;
     text-transform: uppercase;
     padding: 16px 36px;
-    border: 2px solid #003049;
+    border: 2px solid #e7ecef;
     border-radius: 32px;
     transform: translate(0);
     overflow: hidden;
