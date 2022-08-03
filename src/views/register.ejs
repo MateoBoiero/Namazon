@@ -9,16 +9,14 @@
 </header>
 
 <body>
-<!--     <% if(typeof errors != 'undefined') { %> 
-        <p class="errors">Error</p>
-        <ul>
-            <% for (let i = 0; i < errors.length; i++) { %>
-            <li>
-                <%=errors[i].msg%> 
-            </li>
-            <% } %> 
-        </ul>
-        <% } %> -->
+
+    <% if(locals.errors) {%>
+		<ul>
+			<% for (let i=0; i < errors.length; i++) { %>
+				<li style="color: red;"><%= errors[i].msg %> </li>
+			<% } %>
+		</ul>
+	<% } %> 
     <form class="formulario" method="POST" action="/users/register">
         <h1>Registrate</h1>
         <div class="contenedor">

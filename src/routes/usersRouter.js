@@ -10,17 +10,17 @@ const userController = require('../controllers/userController')
 
 //**!     VALIDACIONES   */
 const validationregister = [
-    body('nombre').notEmpty().withMessage('Debes completar este campo'),
-    body('apellido').notEmpty().withMessage('Debes completar este campo'),
-    body('email').isEmail().withMessage('Debes completar este campo'),
-    body('contraseña').notEmpty().isLength({min: 8}).withMessage('Debes completar este campo con mas de 8 letras'),
-    body('imagenUsuario').notEmpty().withMessage('Debes completar este campo')
+    body('nombre').notEmpty().withMessage('Debes completar el Nombre'),
+    body('apellido').notEmpty().withMessage('Debes completar el Apellido'),
+    body('email').isEmail().withMessage('Debes completar el Mail'),
+    body('contraseña').notEmpty().isLength({min: 8}).withMessage('Debes completar la Contraseña con mas de 8 letras'),
+    body('imagenUsuario').notEmpty().withMessage('Debes Colocar una Imagen')
 ];
-/* const validationlogin = [
-    body('nombre').notEmpty().withMessage('Debes completar este campo'),
-    body('email').isEmail().withMessage('Debes completar este campo'),
-    body('contraseña').notEmpty().isLength({min: 8}).withMessage('Debes completar este campo con mas de 8 letras'),
-]; */
+const validationlogin = [
+    body('nombre').notEmpty().withMessage('Debes completar el Nombre'),
+    body('email').isEmail().withMessage('Debes completar el Mail'),
+    body('contraseña').notEmpty().isLength({min: 8}).withMessage('Debes completar la Contraseña con mas de 8 letras'),
+];
 
 //**!     MULTER        */
 const storage = multer.diskStorage({
@@ -39,7 +39,7 @@ const upload = multer({storage:storage});
 
 /* ---- LOGIN ---- */
 router.get('/login',userController.login);
-/* router.post('/login',validationlogin ,userController.processLogin); */
+router.post('/login',validationlogin ,userController.processLogin);
 
 /* ---- REGISTER ---- */
 router.get('/register',userController.register);
