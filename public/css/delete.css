@@ -66,54 +66,16 @@ footer{
 }
 
 body {
-    /* background-color: #001524; */
-    /* background-color: #003049; */
     background-image: url("/images/fondo4.jpg");
     background-attachment: fixed;
 }
-.conteinerGeneral{
-    display: flex;
-    flex-wrap: wrap;
-    margin: 1rem;
-    background-color: transparent;
-    border: 2px solid #e7ecef;
-    color: #e7ecef;
-    border-radius: 2rem;
-    width: 90%;
-    padding: 1rem;
-    box-sizing: border-box;
-}
 
-.conteinerImagen{
-    width: 20%;
-}
-
-
-.conteinerInfo{
-    width:80%
-}
-
-.imagenPelicula{
-    width: 90%;
-    border-radius: 1rem;
-}
-
-.nombrePelicula{
-    font-size: 2.5rem;
-    text-decoration: none;
-    color: #e7ecef;
-    font-weight: bold;
-}
-
-li{
-    list-style: none;
-}
-
+/* ------- */
 button{
     background: transparent;
     color: #e7ecef;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 15px;
     text-transform: uppercase;
     padding: 16px 36px;
     border: 2px solid #e7ecef;
@@ -138,13 +100,13 @@ button:hover::before{
     transition: 0.75s;
 }
 
-.botones{
-    text-align: end;
-    padding-right:2em;
-}
 
 
 h1{
     color: #e7ecef;
+    text-align: center;
+}
+
+.botones{
     text-align: center;
 }

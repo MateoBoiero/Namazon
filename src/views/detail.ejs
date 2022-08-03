@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%-include('./partials/head', {titulo:"Listado", css:"detail"}) %>  <!--*! falta agregar css -->
-<%-include('./partials/header') %>
+<%-include('./partials/head', {titulo:"detail", css:"detail"}) %>
+    <%-include('./partials/header') %>
 
-<body>
-    <div class="conteinerGeneral">
-        <div class="conteinerImagen">
-            <img class="imagenPelicula" src="/images/products/<%=peliculas.imagen %>" />
-        </div>
-        <div class="conteinerInfo"> 
-            <h1 class="nombrePelicula"><%= peliculas.nombre %> </h1>    
-            <p>RATING: <%= peliculas.rating %> </p>
-            <p><%= peliculas.descripcion %> </p>
-            <p>$ <%= peliculas.precio %> </p>
-            <p><a href=""><button class="botonAgregarCarrito" type="submit">Agregar al carrito</button></a></p>
-        </div>    
-    </div>
-        <section>
-        <div class="botones">
-            <a href="/products/delete/<%=peliculas.id%> "><button class="botonBorrar" type="submit">Borrar</button></a>
-            <a href="/products/edit/<%=peliculas.id%> "><button class="botonAgregar" type="submit">Editar</button></a>
-        </div>
+        <body>
+            <div class="conteinerGeneral">
+                <div class="conteinerImagen">
+                    <img class="imagenPelicula" src="/images/products/<%=peliculas.imagen %>" />
+                </div>
+                <div class="conteinerInfo">
+                    <h1 class="nombrePelicula">
+                        <%= peliculas.nombre %>
+                    </h1>
+                    <p>RATING: <%= peliculas.rating %>
+                    </p>
+                    <p>
+                        <%= peliculas.descripcion %>
+                    </p>
+                    <p>$ <%= peliculas.precio %>
+                    </p>
+                    <p><a href=""><button class="botonAgregarCarrito" type="submit">Agregar al carrito</button></a></p>
+                </div>
+            </div>
+            <section>
+                <div class="botones">
+                    <a href="/products/delete/<%=peliculas.id%> "><button class="botonBorrar"
+                            type="submit">Borrar</button></a>
+                    <a href="/products/edit/<%=peliculas.id%> "><button class="botonAgregar"
+                            type="submit">Editar</button></a>
+                </div>
 
-    </section>
+            </section>
 
-</body>
+        </body>
+        <%-include('./partials/footer') %>
+
+</html>

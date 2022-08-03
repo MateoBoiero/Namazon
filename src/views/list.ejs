@@ -8,36 +8,36 @@
             <h1>Listado de peliculas</h1>
             <br>
             <div class="botones">
-            <a  href="/products/add"><button class="botonAgregar" type="submit">Agregar</button></a>
+                <a href="/products/add"><button class="botonAgregar" type="submit">Agregar</button></a>
             </div>
             <br>
             <ul>
                 <% for( let i=0; i < pelicula.length; i++ ) { %>
                     <div class="conteinerGeneral">
                         <div class="conteinerImagen">
-                        <li>
-                            <img class="imagenPelicula"
-                            src="/images/products/<%=pelicula[i].imagen %>"/>
-                        </li>
+                            <li>
+                                <img class="imagenPelicula" src="/images/products/<%=pelicula[i].imagen %>" />
+                            </li>
+                        </div>
+                        <div class="conteinerInfo">
+                            <li>
+                                <a class="nombrePelicula" href="/products/detail/<%= pelicula[i].id %>">
+                                    <%= pelicula[i].nombre %>
+                                </a>
+                            </li>
+                            <li>
+                                <p class="descripcionPelicula">
+                                    <%=pelicula[i].descripcion %>
+                                </p>
+                            </li>
+                            <li>
+                                <p class="precioPelicula">$<%=pelicula[i].precio %>
+                                </p>
+                            </li>
+                            <br>
+                        </div>
                     </div>
-                    <div class="conteinerInfo">
-                        <li>
-                            <a class="nombrePelicula" href="/products/detail/<%= pelicula[i].id %>">
-                                <%= pelicula[i].nombre %>
-                            </a>
-                        </li>
-                        <li>
-                            <p class="descripcionPelicula">
-                                <%=pelicula[i].descripcion %>
-                            </p>
-                        </li>
-                        <li>
-                            <p class="precioPelicula">$<%=pelicula[i].precio %>
-                            </p>
-                        </li>
-                        <br>
-                    </div>
-                    </div>
+
                     <% } %>
 
             </ul>
