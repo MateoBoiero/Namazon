@@ -45,7 +45,4 @@ router.post('/login',validationlogin ,userController.processLogin);
 router.get('/register',userController.register);
 router.post('/register', upload.single('imagenUsuario'), validationregister ,userController.processRegister);
 
-/* ---- FORGOT ---- */
-router.get('/forgot',userController.forgot);
-
 module.exports = router;

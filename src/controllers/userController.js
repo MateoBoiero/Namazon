@@ -65,10 +65,7 @@ const userController= {
         else{
             return res.render('register', {errors:errors.errors})
         }
-    },
-    forgot: (req,res)=>{
-        return res.render('forgot')
-    },
+    }
 }
 
 module.exports = userController;
