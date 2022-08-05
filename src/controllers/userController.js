@@ -17,13 +17,14 @@ const userController= {
             db.Usuario.findAll() /* Busca en la base de datos a los usuarios */
             .then(usuarios=>{
                 let usuarioALogearse; 
-                for(let i = 0; i < usuarios.lenght; i++){  /* Recorro todos los Usuarios */
+                for(let i = 0; i < usuarios.length; i++){  /* Recorro todos los Usuarios */
+                /* res.send(usuarios[i]) */
                     if(usuarios[i].email == req.body.email 
                     && usuarios[i].nombre == req.body.nombre
                     && bcrypt.compareSync(req.body.contraseña,usuarios[i].contraseña))
-                    {usuarioALogearse = usuarios[i];}/* Si las validaciones son Correctas Devuelve un Usuario*/
+                    {usuarioALogearse = usuarios[i];}
                     else{res.send("Error 1")}
-                }                
+                }
                 if(usuarioALogearse == undefined){ /* Si lo anterior es correcto y Usuario es indefinido */
                     return res.render('login', {errors: [
                     {msg: 'Error al Logear'}  /*Devolver Errores */
