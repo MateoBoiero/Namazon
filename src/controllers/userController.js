@@ -12,29 +12,26 @@ const userController= {
         return res.render('login')
     },
     processLogin:(req, res)=>{
-        let errors = validationResult(req);
-        if(errors.isEmpty()){
-            db.Usuario.findAll()
+        let errors = validationResult(req); /* Validaciones */
+        if(errors.isEmpty()){   /* Si no Tiene Errores */
+            db.Usuario.findAll() /* Busca en la base de datos a los usuarios */
             .then(usuarios=>{
-
-                let usuarioALogearse;
-                for(let i = 0; i < usuarios.lenght; i++){
-                    if(usuarios[i].email == req.body.email && usuarios[i].nombre == req.body.nombre){
-                        if(bcrypt.compareSync(req.body.contraseña,usuarios[i].contraseña))
-                        {
-                            usuarioALogearse = usuarios[i];
-                        }
-                    }
-                }
-                if(usuarioALogearse == undefined){
+                let usuarioALogearse; 
+                for(let i = 0; i < usuarios.lenght; i++){  /* Recorro todos los Usuarios */
+                    if(usuarios[i].email == req.body.email 
+                    && usuarios[i].nombre == req.body.nombre
+                    && bcrypt.compareSync(req.body.contraseña,usuarios[i].contraseña))
+                    {usuarioALogearse = usuarios[i];}/* Si las validaciones son Correctas Devuelve un Usuario*/
+                    else{res.send("Error 1")}
+                }                
+                if(usuarioALogearse == undefined){ /* Si lo anterior es correcto y Usuario es indefinido */
                     return res.render('login', {errors: [
-                    {msg: 'Error al Logear'}
+                    {msg: 'Error al Logear'}  /*Devolver Errores */
                 ]})
                 }
-                req.session.usuarioLogeado = usuarioALogearse
-                res.send('Buena Mateo!!')
-
-                if(req.body.checkbox != undefined){
+                else{res.send("Error 2")}
+                req.session.usuarioLogeado = usuarioALogearse /* Aqui Cambia nombre de La Variable */
+                if(req.body.checkbox != undefined){ /* Checkbox */
                     res.cookie('checkbox', usuarioALogearse.email, usuarioALogearse.contraseña,{maxAge: 60000})
                 }
             })
