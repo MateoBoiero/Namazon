@@ -19,6 +19,7 @@ const userController= {
                 let usuarioALogearse; 
                 for(let i = 0; i < usuarios.length; i++){  /* Recorro todos los Usuarios */
                 /* res.send(usuarios[i]) */
+                /* ERROR ACA */
                     if(usuarios[i].email == req.body.email 
                     && usuarios[i].nombre == req.body.nombre
                     && bcrypt.compareSync(req.body.contraseña,usuarios[i].contraseña))
