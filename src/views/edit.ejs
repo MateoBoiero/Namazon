@@ -20,7 +20,7 @@
             <p>
                 <select name="genre_id" id="" required>
                     <% allGeneros.forEach(genero => { %>
-                    <option value="<%= genero.id %>" <% if (Pelicula.genero.id == genero.id) { %><%= 'selected' %><% }; %>><%= genero.genero %></option>
+                    <option value="<%= genero.id %>"><%= genero.genero %></option>
                     <% }); %>
                 </select>
             </p>

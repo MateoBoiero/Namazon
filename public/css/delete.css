@@ -51,6 +51,7 @@ footer{
     background-color: #003049;
     margin: 1rem;
     padding: 1rem;
+    margin-top: 19em;
 }
 .eslogan{
     font-size: 1rem;
@@ -71,6 +72,11 @@ body {
 }
 
 /* ------- */
+
+.conteinerGeneral{
+margin: auto;
+}
+
 button{
     background: transparent;
     color: #e7ecef;

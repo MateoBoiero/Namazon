@@ -5,7 +5,7 @@
 <%-include('./partials/header') %>
 
 <body>
-    
+    <div class="conteinerGeneral">
     <h1>Estas seguro de querer borrar esta película: <%= peliculas.nombre %>???</h1>
     
         <form action="/products/delete/<%= peliculas.id %>" method="POST">
@@ -15,7 +15,7 @@
             </div>
 
         </form>
-    
+    </div>
     
 </body>
 <%-include('./partials/footer') %>

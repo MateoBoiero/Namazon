@@ -27,8 +27,8 @@ module.exports = (sequelize, dataTypes) => {
         rating: {
             type: dataTypes.DECIMAL(3, 1).UNSIGNED,
             allowNull: false
-        }
-       /*  idGenero:{
+        }/* ,
+        idGenero:{
             type: dataTypes.BIGINT(10).UNSIGNED,
         },
         idActor: {type: dataTypes.BIGINT(10).UNSIGNED,
@@ -39,7 +39,7 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     }
     const Pelicula = sequelize.define(alias,cols,config);
-    /* Pelicula.assosiate = function(models) {
+    /* Pelicula.associate = function(models) {
         Pelicula.belongsTo(models.Genero,{
             as:"generos",
             foreingKey:"idGenero"

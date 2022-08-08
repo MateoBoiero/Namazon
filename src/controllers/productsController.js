@@ -46,7 +46,7 @@ const productsController = {
     },
     edit: function(req, res) {
         db.Pelicula.findByPk(req.params.id,{
-            include:[Generos]
+            include:['generos']
         })
         .then(peliculas=>{
             db.Genero.findAll()
