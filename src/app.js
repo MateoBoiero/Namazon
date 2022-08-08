@@ -24,9 +24,7 @@ const productsRouter = require('./routes/productsRouter.js');
 
 
 //**!        ROUTER          */
-app.use((req, res, next)=>{
- res.status(404).render("error404")
-})
+
 app.use('/', mainRouter);
 app.use('/products', productsRouter);
 app.use('/users', usersRouter);
