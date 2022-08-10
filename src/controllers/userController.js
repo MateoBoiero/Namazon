@@ -51,6 +51,7 @@ const userController= {
             return res.render('login', {errors:errors.errors})
         }
     }, */
+    /* hola */
     processLogin:(req, res)=>{
         let errors = validationResult(req);
         if(errors.isEmpty()){   
