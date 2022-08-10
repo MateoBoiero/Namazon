@@ -63,7 +63,7 @@ const productsController = {
             precio:req.body.precio,
             descripcion:req.descripcion,
             imagen:req.body.imagen,
-            idGenero:req.body.idGenero
+            /* idGenero:req.body.idGenero */
         },{
             where:{
                 id:req.params.id
