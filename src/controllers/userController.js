@@ -14,7 +14,10 @@ const userController= {
     processLogin:(req, res)=>{
         let errors = validationResult(req); /* Validaciones */
         if(errors.isEmpty()){   /* Si no Tiene Errores */
-            db.Usuario.findAll() /* Busca en la base de datos a los usuarios */
+            db.Usuario.findOne({
+            where: { email: req.body.email }
+        })
+/* Busca en la base de datos a los usuarios */
             .then(usuarios=>{
                 let usuarioALogearse; 
                 for(let i = 0; i < usuarios.length; i++){  /* Recorro todos los Usuarios */
