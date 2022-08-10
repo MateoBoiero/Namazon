@@ -1,7 +1,7 @@
 //**!      CONFIGURACION    */
 const express = require('express');
 const app = express();
-/* const session = require('express-session') */
+const session = require('express-session')
 const path = require('path');
 const methodOverride = require('method-override');
 const cookieParser = require('cookie-parser');

@@ -11,29 +11,66 @@ const userController= {
     login: (req,res)=>{
         return res.render('login')
     },
-    processLogin:(req, res)=>{
-        let errors = validationResult(req); /* Validaciones */
-        if(errors.isEmpty()){   /* Si no Tiene Errores */
-            db.Usuario.findAll() /* Busca en la base de datos a los usuarios */
+    processLogin: (req,res)=>{
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+        db.Usuario.findOne({
+                where: { email: req.body.email, 
+                        nombre:req.body.nombre}
+            })
+            .then((usuarioALogearse) => {
+                if (usuarioALogearse) {
+                    const contraseñaValida = bcrypt.compareSync(req.body.contraseña, usuarioALogearse.contraseña);
+                    if (contraseñaValida) {
+                        req.session.usuarioLogeado = usuarioALogearse;
+                        if (req.body.checkbox) {
+                            res.cookie({ where: { email: req.body.email } }, { maxAge: 1000 * 60 * 2 })
+                        }
+                        return res.redirect('/');
+                    }
+                    
+                    return res.render('login', {
+                        OldData: req.body,
+                        errors: {
+                            password: {
+                                msg: 'Contraseña Incorrecta'
+                            }
+                        }
+                    });
+                }
+                return res.render('login', {
+                    errors: {
+                        email: {
+                            msg: 'Verificar Email'
+                        }
+                    }
+                })
+            })
+        }
+        else{
+            return res.render('login', {errors:errors.errors})
+        }
+    },
+    /* processLogin:(req, res)=>{
+        let errors = validationResult(req);
+        if(errors.isEmpty()){   
+            db.Usuario.findAll()
             .then(usuarios=>{
                 let usuarioALogearse; 
-                for(let i = 0; i < usuarios.length; i++){  /* Recorro todos los Usuarios */
-                /* res.send(usuarios[i]) */
-                /* ERROR ACA */
+                for (let i=0; i<usuarios.length; i++){
                     if(usuarios[i].email == req.body.email 
-                    && usuarios[i].nombre == req.body.nombre
-                    && bcrypt.compareSync(req.body.contraseña,usuarios[i].contraseña))
-                    {usuarioALogearse = usuarios[i];}
-                    else{res.send("Error 1")}
+                        && usuarios[i].nombre == req.body.nombre
+                        && bcrypt.compareSync(req.body.contraseña,usuarios[i].contraseña))
+                        {usuarioALogearse = usuarios[i]
+                        res.redirect('/');}
                 }
-                if(usuarioALogearse == undefined){ /* Si lo anterior es correcto y Usuario es indefinido */
+                 if(usuarioALogearse == undefined){ 
                     return res.render('login', {errors: [
-                    {msg: 'Error al Logear'}  /*Devolver Errores */
+                    {msg: 'Error al Logear'} 
                 ]})
-                }
-                else{res.send("Error 2")}
-                req.session.usuarioLogeado = usuarioALogearse /* Aqui Cambia nombre de La Variable */
-                if(req.body.checkbox != undefined){ /* Checkbox */
+                }*/
+                /* req.session.usuarioLogeado = usuarioALogearse  */
+                /* if(req.body.checkbox != undefined){
                     res.cookie('checkbox', usuarioALogearse.email, usuarioALogearse.contraseña,{maxAge: 60000})
                 }
             })
@@ -41,7 +78,7 @@ const userController= {
         else{
             return res.render('login', {errors:errors.errors})
         }
-    },
+    }, */
     register: (req,res)=>{
         return res.render('register')
     },

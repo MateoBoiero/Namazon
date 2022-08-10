@@ -70,7 +70,7 @@ const productsController = {
             }
         })
         .then(peliculas=>{
-            res.render('/index')
+            res.render('/list')
         })
     },
     delete: function (req, res) {
