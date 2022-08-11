@@ -11,11 +11,7 @@ const userController= {
     login: (req,res)=>{
         return res.render('login')
     },
-<<<<<<< HEAD
     processLogin: (req,res)=>{
-=======
-    /* processLogin: (req,res)=>{
->>>>>>> 96268628348368f48cda5545f0a132f2a9055ea7
         let errors = validationResult(req);
         if(errors.isEmpty()){
         db.Usuario.findOne({
@@ -54,47 +50,7 @@ const userController= {
         else{
             return res.render('login', {errors:errors.errors})
         }
-<<<<<<< HEAD
     },
-    /* processLogin:(req, res)=>{
-=======
-    }, */
-    /* hola */
-    processLogin:(req, res)=>{
->>>>>>> 96268628348368f48cda5545f0a132f2a9055ea7
-        let errors = validationResult(req);
-        if(errors.isEmpty()){   
-            db.Usuario.findAll()
-            .then(usuarios=>{
-                let usuarioALogearse; 
-                for (let i=0; i<usuarios.length; i++){
-                    if(usuarios[i].email == req.body.email 
-                        && usuarios[i].nombre == req.body.nombre
-                        && bcrypt.compareSync(req.body.contraseña,usuarios[i].contraseña))
-                        {usuarioALogearse = usuarios[i]
-                        res.redirect('/');}
-                }
-                 if(usuarioALogearse == undefined){ 
-                    return res.render('login', {errors: [
-                    {msg: 'Error al Logear'} 
-                ]})
-<<<<<<< HEAD
-                }*/
-                /* req.session.usuarioLogeado = usuarioALogearse  */
-                /* if(req.body.checkbox != undefined){
-=======
-                }
-                /* req.session.usuarioLogeado = usuarioALogearse  */
-                 if(req.body.checkbox != undefined){
->>>>>>> 96268628348368f48cda5545f0a132f2a9055ea7
-                    res.cookie('checkbox', usuarioALogearse.email, usuarioALogearse.contraseña,{maxAge: 60000})
-                }
-            })
-        }
-        else{
-            return res.render('login', {errors:errors.errors})
-        }
-    }, */
     register: (req,res)=>{
         return res.render('register')
     },
