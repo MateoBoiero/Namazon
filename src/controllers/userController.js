@@ -11,6 +11,46 @@ const userController= {
     login: (req,res)=>{
         return res.render('login')
     },
+    processLogin: (req,res)=>{
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+        db.Usuario.findOne({
+                where: { email: req.body.email, 
+                        nombre:req.body.nombre}
+            })
+            .then((usuarioALogearse) => {
+                if (usuarioALogearse) {
+                    const contraseñaValida = bcrypt.compareSync(req.body.contraseña, usuarioALogearse.contraseña);
+                    if (contraseñaValida) {
+                        req.session.usuarioLogeado = usuarioALogearse;
+                        if (req.body.checkbox) {
+                            res.cookie({ where: { email: req.body.email } }, { maxAge: 1000 * 60 * 2 })
+                        }
+                        return res.redirect('/');
+                    }
+                    
+                    return res.render('login', {
+                        OldData: req.body,
+                        errors: {
+                            password: {
+                                msg: 'Contraseña Incorrecta'
+                            }
+                        }
+                    });
+                }
+                return res.render('login', {
+                    errors: {
+                        email: {
+                            msg: 'Verificar Email'
+                        }
+                    }
+                })
+            })
+        }
+        else{
+            return res.render('login', {errors:errors.errors})
+        }
+    },
     register: (req,res)=>{
         return res.render('register')
     },
