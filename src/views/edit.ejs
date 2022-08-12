@@ -6,28 +6,20 @@
 
 <body>
 
-    <h1 class="titulo">Película Editada:  <%= Pelicula.nombre %></h1>
+    <h1 class="titulo">Película Editada:  <%= peliculas.nombre %></h1>
     <section class="formulario">
-        <form action="/Peliculas/update/<%= Pelicula.id %>" method="POST">
+        <form action="/products/edit/<%= peliculas.id %>" method="POST">
             <label for="title">Titulo de la Pelicula </label>
-            <p><input type="text" name="title" id="" value="<%= Pelicula.nombre %>" required></p>
+            <p><input type="text" name="title" id="" value="<%= peliculas.nombre %>" required></p>
             <label for="rating">Rating </label>
-            <p><input type="number" name="rating" id="" value="<%= Pelicula.rating %>" required></p>
+            <p><input type="number" name="rating" id="" value="<%= peliculas.rating %>" required></p>
             <label for="awards">Precio </label>
-            <p><input type="number" name="awards" id="" value="<%= Pelicula.precio %>" required></p>
+            <p><input type="number" name="awards" id="" value="<%= peliculas.precio %>" required></p>
             <label for="description">Descripcion </label>
-            <p><input type="text" name="description" id="" value="<%= Pelicula.description %> required"></p>
-            <p>
-                <select name="genre_id" id="" required>
-                    <% allGeneros.forEach(genero => { %>
-                    <option value="<%= genero.id %>"><%= genero.genero %></option>
-                    <% }); %>
-                </select>
-            </p>
-            <br>
+            <p><input type="text" name="description" id="" value="<%= peliculas.description %> required"></p>
             <p> <button class="botonAgregar" type="submit">Actualizar</button>
         
-            <a  class="botonVolver" href="/movies">Listado de Películas</a></p>
+            <a  class="botonVolver" href="/list">Listado de Películas</a></p>
         </form>
     </section>
 </body>
