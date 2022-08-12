@@ -2,13 +2,13 @@ html{
     font-family: 'Roboto';
 }
 header {
-    background-color: #003049;
+    /* background-color: #003049; */
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
+/*     flex-wrap: wrap; */
 }
 .logo{
-    width: 10%;
+    width: 100%;
     margin-bottom: 0.01em;
     padding-left: 2em;
 }

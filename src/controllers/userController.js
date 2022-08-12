@@ -22,21 +22,21 @@ const userController= {
                 if (usuarioALogearse) {
                     const contraseñaValida = bcrypt.compareSync(req.body.contraseña, usuarioALogearse.contraseña);
                     if (contraseñaValida) {
-                        req.session.usuarioLogeado = usuarioALogearse;
+                        /* req.session.usuarioLogeado = usuarioALogearse; */
                         if (req.body.checkbox) {
-                            res.cookie({ where: { email: req.body.email } }, { maxAge: 1000 * 60 * 2 })
+                            res.cookie({ where: { email: req.body.email, nombre: req.body.nombre } }, { maxAge: 1000 * 60 * 2 })
                         }
                         return res.redirect('/');
                     }
                     
-                    return res.render('login', {
-                        OldData: req.body,
-                        errors: {
-                            password: {
-                                msg: 'Contraseña Incorrecta'
-                            }
+                return res.render('login', {
+                    OldData: req.body,
+                    errors: {
+                        password: {
+                             msg: 'Contraseña Incorrecta'
                         }
-                    });
+                    }
+                });
                 }
                 return res.render('login', {
                     errors: {
@@ -50,6 +50,7 @@ const userController= {
         else{
             return res.render('login', {errors:errors.errors})
         }
+        
     },
     
     register: (req,res)=>{
@@ -78,3 +79,4 @@ const userController= {
 }
 
 module.exports = userController;
+
