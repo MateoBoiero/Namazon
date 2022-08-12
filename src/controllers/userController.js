@@ -51,6 +51,7 @@ const userController= {
             return res.render('login', {errors:errors.errors})
         }
     },
+    
     register: (req,res)=>{
         return res.render('register')
     },
