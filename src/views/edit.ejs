@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%-include('./partials/head', {titulo:"edit", css:""}) %>  <!--*! falta agregar css -->
+<%-include('./partials/head', {titulo:"edit", css:"edit"}) %>  <!--*! falta agregar css -->
 <%-include('./partials/header') %>
 
 <body>
-<!-- hola -->
+    <div class="formulario">
     <h1 class="titulo">Película Editada:  <%= peliculas.nombre %></h1>
     <section class="formulario">
-        <form action="/products/edit/<%= peliculas.id %>" method="POST">
+        <form action="/products/update/<%= peliculas.id %>" method="POST">
             <label for="title">Titulo de la Pelicula </label>
             <p><input type="text" name="title" id="" value="<%= peliculas.nombre %>" required></p>
             <label for="rating">Rating </label>
@@ -17,11 +17,14 @@
             <p><input type="number" name="awards" id="" value="<%= peliculas.precio %>" required></p>
             <label for="description">Descripcion </label>
             <p><input type="text" name="description" id="" value="<%= peliculas.description %> required"></p>
-            <p> <button class="botonAgregar" type="submit">Actualizar</button>
-        
-            <a  class="botonVolver" href="/list">Listado de Películas</a></p>
+            
+        </section>
+        </div>
+            <p class="botones"> 
+                <button class="botonAgregar" type="submit">Actualizar</button>
+                <a href="/list"><button type="submit">Listado de peliculas</button></a>
+                </p>
         </form>
-    </section>
 </body>
-
+<%-include('./partials/footer') %>
 </html>

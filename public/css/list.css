@@ -38,10 +38,12 @@ header {
     padding: 1em;
 }
 .vacio{
-    width: 60%;
+    width: 50%;
 
 }
-
+.fotoUsuario{
+    color: #e7ecef;
+}
 .perfilUsuario {
     font-size: 20px;
     color: #e7ecef;

@@ -2,11 +2,7 @@
 <html lang="en">
         
 <%-include('./partials/head',{titulo:"Login", css:"login"}) %>  
-<header>
-    <img class="logo" src="/images/niamazonBlanco.png" alt="logo">
-    <div class="vacio"></div>
-    <div class="bars"><i class="fas burguerBar fa-bars"></i></div>
-</header>
+<%-include('./partials/headerUsers') %>
 <body>
     <% if(locals.errors) {%>
 		<ul>
