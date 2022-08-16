@@ -86,13 +86,14 @@ body {
 }
 .conteiner{
     width: 100%;
-    padding: 2.5em;
+    padding: 3em;
 }
 h1{
     text-align: center;
     color: #001524;
     font-size: 40px;
 }
+
 input{
     font-size: 20px;
     width: 70%;

@@ -45,15 +45,10 @@ const productsController = {
         })
     },
     edit: function(req, res) {
-        db.Pelicula.findByPk(req.params.id,{
-            include:['generos']
-        })
+        db.Pelicula.findByPk(req.params.id)
         .then(peliculas=>{
-            db.Genero.findAll()
-            .then(generos=>{
-                res.render('edit.ejs',{peliculas, allGeneros:generos})
+             res.render('edit.ejs',{peliculas})
             })
-        })
     },
     update: function (req,res) {
         db.Pelicula.update({
@@ -61,8 +56,8 @@ const productsController = {
             nombre:req.body.nombre,
             rating:req.body.rating,
             precio:req.body.precio,
-            descripcion:req.descripcion,
-            imagen:req.body.imagen,
+            descripcion:req.descripcion/* ,
+            imagen:req.body.imagen, */
             /* idGenero:req.body.idGenero */
         },{
             where:{
@@ -70,7 +65,7 @@ const productsController = {
             }
         })
         .then(peliculas=>{
-            res.render('/list')
+            res.redirect('/list')
         })
     },
     delete: function (req, res) {

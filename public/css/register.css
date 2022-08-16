@@ -12,7 +12,9 @@ header {
     margin-bottom: 0.01em;
     padding-left: 2em;
 }
-
+.fotoUsuario{
+    color: #e7ecef;
+}
 .bars {
     font-size: 30px;
     color: #e7ecef;
@@ -25,7 +27,7 @@ fa-bars{
 }
 
 .vacio{
-    width: 75%;
+    width: 60%;
 
 }
 

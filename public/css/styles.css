@@ -41,7 +41,9 @@ header {
     width: 60%;
 
 }
-
+.fotoUsuario{
+  color: #e7ecef;
+}
 .perfilUsuario {
     font-size: 20px;
     color: #e7ecef;

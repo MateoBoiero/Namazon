@@ -30,10 +30,12 @@ fa-bars{
 }
 
 .vacio{
-    width: 75%;
+    width: 60%;
 
 }
-
+.fotoUsuario{
+    color: #e7ecef;
+}
 footer{
     background-color: #003049;
     margin: 1rem;
