@@ -110,14 +110,19 @@ p{
     font-size: 1em;
     margin: 1em;
 }
-a{
+/* a{
     text-decoration: none;
     color: #001524;
     border-bottom: #001524 1px solid;
-}
+} */
 /* button:hover{
     background-color: #043d63;
 } */
+.perfilUsuario {
+    font-size: 20px;
+    color: #e7ecef;
+    width: 5%;
+}
 .button{
     display:block;
     width: 5.5em;
@@ -139,7 +144,7 @@ a{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: opacity .25s;
+    transition: opacity .100s;
 }
 .icon{
     opacity: 0;
